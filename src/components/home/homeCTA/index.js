@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const TrophyCTA = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 relative overflow-hidden ">
+    <section className="py-20 px-6 bg-gradient-to-br  relative overflow-hidden rounded-2xl">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full blur-3xl"></div>
@@ -22,11 +22,11 @@ const TrophyCTA = () => {
               className="text-center lg:text-left"
             >
               <div className="inline-flex items-center bg-gradient-to-r from-amber-100 to-yellow-100 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🏆 Award-Winning Solutions
+                🏆 Secure Solutions
               </div>
 
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Ready to Win
+                Ready to Build
                 <span className="bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">
                   {" "}
                   Big?
@@ -45,15 +45,7 @@ const TrophyCTA = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-amber-600 hover:to-yellow-600"
                 >
-                  Start Your Winning Project
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-amber-500 text-amber-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-amber-50 transition-all duration-300"
-                >
-                  View Our Victories
+                  Conatct Us Now
                 </motion.button>
               </div>
 
@@ -83,7 +75,7 @@ const TrophyCTA = () => {
             >
               <div className="relative">
                 {/* Glowing background effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full blur-2xl opacity-30 scale-110 animate-pulse"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-400 to-neutral-400 rounded-full blur-2xl opacity-30 scale-110 animate-pulse"></div>
 
                 {/* Trophy container with floating animation */}
                 <motion.div
@@ -98,9 +90,9 @@ const TrophyCTA = () => {
                   }}
                   className="relative z-10"
                 >
-                  <div className="bg-gradient-to-br from-white to-amber-50 p-8 rounded-full shadow-2xl">
+                  <div className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-full shadow-2xl">
                     <img
-                      src="/assets/images/home/champ-cup.svg"
+                      src="/assets/images/home/security-icon.svg"
                       alt="Champion Trophy"
                       className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 object-contain filter drop-shadow-lg"
                     />
@@ -109,15 +101,15 @@ const TrophyCTA = () => {
 
                 {/* Floating particles */}
                 <div
-                  className="absolute top-10 left-10 w-3 h-3 bg-yellow-400 rounded-full animate-bounce"
+                  className="absolute top-10 left-10 w-3 h-3 bg-neutral-400 rounded-full animate-bounce"
                   style={{ animationDelay: "0.5s" }}
                 ></div>
                 <div
-                  className="absolute top-20 right-10 w-2 h-2 bg-amber-400 rounded-full animate-bounce"
+                  className="absolute top-20 right-10 w-2 h-2 bg-gray-400 rounded-full animate-bounce"
                   style={{ animationDelay: "1s" }}
                 ></div>
                 <div
-                  className="absolute bottom-20 left-5 w-4 h-4 bg-orange-400 rounded-full animate-bounce"
+                  className="absolute bottom-20 left-5 w-4 h-4 bg-neutral-500 rounded-full animate-bounce"
                   style={{ animationDelay: "1.5s" }}
                 ></div>
 
@@ -127,10 +119,10 @@ const TrophyCTA = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5, duration: 0.6 }}
-                  className="absolute -top-5 -left-5 bg-white rounded-xl shadow-lg p-3 border border-amber-200"
+                  className="absolute -top-5 -left-5 bg-white rounded-xl shadow-lg p-3 border border-gray-200"
                 >
-                  <div className="text-2xl font-bold text-amber-600">75+</div>
-                  <div className="text-xs text-gray-600">Projects Won</div>
+                  <div className="text-2xl font-bold text-gray-600">75+</div>
+                  <div className="text-xs text-gray-600">Projects Done</div>
                 </motion.div>
 
                 <motion.div
@@ -138,9 +130,9 @@ const TrophyCTA = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.8, duration: 0.6 }}
-                  className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-lg p-3 border border-amber-200"
+                  className="absolute -bottom-5 -right-5 bg-white rounded-xl shadow-lg p-3 border border-gray-200"
                 >
-                  <div className="text-2xl font-bold text-amber-600">6+</div>
+                  <div className="text-2xl font-bold text-gray-600">6+</div>
                   <div className="text-xs text-gray-600">Years Experience</div>
                 </motion.div>
               </div>
@@ -153,7 +145,7 @@ const TrophyCTA = () => {
       <div className="absolute bottom-0 left-0 right-0">
         <svg
           viewBox="0 0 1200 120"
-          className="w-full h-auto fill-current text-amber-100 opacity-50"
+          className="w-full h-auto fill-current text-gray-100 opacity-50"
         >
           <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
         </svg>
