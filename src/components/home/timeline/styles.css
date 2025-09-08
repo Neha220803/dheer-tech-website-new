@@ -1,0 +1,95 @@
+/* Timeline Section Styles */
+.timeline-section {
+    min-height: 100vh;
+    padding: 4rem 2rem;
+}
+
+/* Main container for the timeline */
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Content wrapper with flex layout */
+.timeline-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Left sticky column */
+.left-sticky-column {
+    flex: 0 0 400px;
+    /* Fixed width, won't grow or shrink */
+    position: sticky;
+    top: 2rem;
+    /* Stick 2rem from the top */
+    height: fit-content;
+    /* Important: don't take full height */
+}
+
+.sticky-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Right scrollable column */
+.right-scroll-column {
+    flex: 1;
+    /* Takes remaining space */
+    min-height: 200vh;
+    /* Ensure enough height for scrolling */
+}
+
+/* Individual timeline items */
+.timeline-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border-left: 4px solid #ffffff;
+    backdrop-filter: blur(5px);
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .timeline-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .left-sticky-column {
+        flex: none;
+        position: static;
+        /* Remove sticky on mobile */
+        width: 100%;
+    }
+
+    .right-scroll-column {
+        min-height: auto;
+    }
+
+    .timeline-section {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sticky-content,
+    .timeline-item {
+        padding: 1.5rem;
+    }
+
+    .timeline-container {
+        padding: 0;
+    }
+}
