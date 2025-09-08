@@ -37,7 +37,7 @@ const TimelineStickyComp = () => {
   ];
 
   return (
-    <section className="bg-primary timeline-section">
+    <section className="bg-primary-400 timeline-section">
       <h1 className="text-4xl text-white text-center mb-8">How We Work</h1>
 
       {/* Container for sticky functionality */}

@@ -18,12 +18,12 @@ const HomeAboutComp = () => {
 
   return (
     <div ref={containerRef} className="relative h-[300vh] w-full ">
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-screen w-full overflow-hidden pb-5">
         <BackgroundElements />
 
-        <div className="relative z-10 flex flex-col justify-center h-full w-full px-4">
+        <div className="relative z-10 flex flex-col justify-end h-full w-full px-4">
           <div className="max-w-4xl mx-auto w-full">
-            <div className="mb-12">
+            <div className="mb-8">
               <h1 className="font-bold text-primary opacity-75 text-4xl md:text-7xl ">
                 ABOUT
               </h1>
@@ -63,13 +63,11 @@ const HomeAboutComp = () => {
                 text="With cloud-first architecture and a focus on continuous growth, we help businesses thrive."
               />
 
-              <div className="mt-8">
-                <TextSection
-                  activeSection={activeSection}
-                  sectionIndex={5}
-                  text="Our dedicated support team and collaborative approach ensure your success every step of the way."
-                />
-              </div>
+              <TextSection
+                activeSection={activeSection}
+                sectionIndex={5}
+                text="Our dedicated support team and collaborative approach ensure your success every step of the way."
+              />
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@
 .right-scroll-column {
     flex: 1;
     /* Takes remaining space */
-    min-height: 200vh;
+    /* min-height: 200vh; */
     /* Ensure enough height for scrolling */
 }
 
