@@ -38,35 +38,36 @@ const TimelineStickyComp = () => {
 
   return (
     <section className="bg-primary-400 timeline-section">
-      <h1 className="text-4xl text-white text-center mb-8">How We Work</h1>
+      {/* <h1 className="text-4xl text-white text-center mb-8">How We Work</h1> */}
 
       {/* Container for sticky functionality */}
       <div className="timeline-container">
         <div className="timeline-content">
-          {/* Left sticky column */}
           <div className="left-sticky-column">
             <div className="sticky-content">
               <h2 className="text-2xl font-bold text-white mb-4">
                 Our Journey
               </h2>
               <p className="text-white">
-                This content will stick to the top while you scroll through the
-                timeline on the right.
+                From initial discovery to ongoing support, we guide you through
+                every stage of building and growing your digital presence. Our
+                process is designed to deliver impactful websites that drive
+                results and evolve with your business.
               </p>
               <div className="mt-6 p-4 bg-white/10 rounded-lg">
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Key Milestones
+                  How We Work
                 </h3>
                 <ul className="text-white space-y-2">
-                  <li>• Founded in 2020</li>
-                  <li>• First major client</li>
-                  <li>• Team expansion</li>
-                  <li>• International reach</li>
+                  <li>• Discovery</li>
+                  <li>• Design</li>
+                  <li>• Development</li>
+                  <li>• Deployment</li>
+                  <li>• Support</li>
                 </ul>
               </div>
             </div>
           </div>
-
           {/* Right scrollable column - Now mapped from data */}
           <div className="right-scroll-column">
             {timelineData.map((item) => (
