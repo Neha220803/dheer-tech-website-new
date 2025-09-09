@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import { useScroll, useTransform, motion } from "framer-motion";
 const one = "/assets/images/home/project1.png";
@@ -9,11 +9,27 @@ const three = "/assets/images/home/project3.png";
 const four = "/assets/images/home/project4.png";
 
 const HorizontalScrollProjectComp = () => {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkIfDesktop = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    checkIfDesktop();
+    window.addEventListener("resize", checkIfDesktop); // Add resize listener
+
+    return () => window.removeEventListener("resize", checkIfDesktop); // Cleanup
+  }, []);
+
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["0%", isDesktop ? "-55%" : "-72%"]
+  );
   return (
-    <div className="carousel bg-neutral-700 " ref={targetRef}>
+    <div className="carousel bg-neutral-700 " ref={targetRef} id="projects">
       <div className="projects-header">
         <h1 className="projects-title">PROJECTS</h1>
         <p className="projects-description">

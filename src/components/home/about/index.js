@@ -17,7 +17,7 @@ const HomeAboutComp = () => {
   );
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] w-full ">
+    <div ref={containerRef} className="relative h-[300vh] w-full " id="about">
       <div className="sticky top-0 h-screen w-full overflow-hidden pb-5">
         <BackgroundElements />
 

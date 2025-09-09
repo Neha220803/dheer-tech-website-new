@@ -9,32 +9,33 @@ const FooterComp = () => {
       <div className="relative h-[calc(100vh+70vh)] -top-[100vh]">
         <div className="h-[70vh] sticky top-[calc(100vh-70vh)]">
           <div className="h-[70vh] sticky top-[calc(100vh-70vh)]">
-            <div className="bg-color2-200 py-8 px-12 h-full w-full flex flex-col justify-between">
-              <div>
+            <div className="bg-neutral-700 py-8 px-12 h-full w-full flex flex-col justify-between">
+              <div className="text-white">
                 <div className="flex shrink-0 gap-20">
                   <div className="flex flex-col gap-2">
-                    <h3 className="mb-2 uppercase text-[#ffffff80]">About</h3>
+                    <h3 className="mb-2 uppercase text-[#ffffff80]">Links</h3>
                     <p>Home</p>
+                    <p>About</p>
+                    <p>Services</p>
                     <p>Projects</p>
-                    <p>Our Mission</p>
                     <p>Contact Us</p>
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="mb-2 uppercase text-[#ffffff80]">
-                      Education
+                      Social Media
                     </h3>
-                    <p>News</p>
-                    <p>Learn</p>
-                    <p>Certification</p>
-                    <p>Publications</p>
+                    <p>Facebook</p>
+                    <p>Linkedin</p>
+                    <p>YouTube</p>
+                    <p>Facebook</p>
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between items-end">
+              <div className="flex flex-col md:flex-row text-white justify-between md:items-end">
                 <h1 className="text-[10vw] leading-[0.8] mt-10">
                   Dheer Tech Inc
                 </h1>
-                <p>©copyright</p>
+                <p>©DheerTech, All rights reserved</p>
               </div>
             </div>
           </div>

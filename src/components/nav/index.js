@@ -43,7 +43,7 @@ export const HomeNavComp = () => {
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4">
         <div
           className={cn(
-            "border rounded-full shadow-2xl transition-all duration-300",
+            "border rounded-3xl md:rounded-full shadow-2xl transition-all duration-300",
             isScrolled
               ? "backdrop-blur-lg bg-white/10 border-white/20"
               : "bg-white/95 border-gray-200"
@@ -146,64 +146,58 @@ export const HomeNavComp = () => {
               </Button>
             </div>
           </div>
+        </div>
+        {/* Mobile Navigation Menu - Simple Dropdown */}
+        <div
+          className={cn(
+            "border rounded-3xl md:rounded-full shadow-2xl lg:hidden transition-all mt-3 duration-300 ease-in-out overflow-hidden",
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0",
+            isScrolled
+              ? "backdrop-blur-lg bg-white/10 border-white/20"
+              : "bg-white/95 border-gray-200"
+          )}
+        >
+          <div className="px-6 py-4 border-t border-white/20">
+            <div className="space-y-2">
+              <Button
+                variant="ghost"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
+                onClick={() => handleNavClick("#home")}
+              >
+                Home
+              </Button>
 
-          {/* Mobile Navigation Menu - Simple Dropdown */}
-          <div
-            className={cn(
-              "lg:hidden transition-all duration-300 ease-in-out overflow-hidden",
-              isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-            )}
-          >
-            <div className="px-6 py-4 border-t border-white/20">
-              <div className="space-y-2">
+              <Button
+                variant="ghost"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
+                onClick={() => handleNavClick("#about")}
+              >
+                About
+              </Button>
+
+              <Button
+                variant="ghost"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
+                onClick={() => handleNavClick("#services")}
+              >
+                Services
+              </Button>
+
+              <Button
+                variant="ghost"
+                className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
+                onClick={() => handleNavClick("#projects")}
+              >
+                Projects
+              </Button>
+
+              <div className="pt-3">
                 <Button
-                  variant="ghost"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={() => handleNavClick("#home")}
+                  className="w-full bg-primary text-white font-medium rounded-full"
+                  onClick={() => handleNavClick("#contact")}
                 >
-                  Home
+                  Get Started
                 </Button>
-
-                <Button
-                  variant="ghost"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={() => handleNavClick("#services")}
-                >
-                  Services
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={() => handleNavClick("#projects")}
-                >
-                  Projects
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={() => handleNavClick("#resources")}
-                >
-                  Resources
-                </Button>
-
-                <Button
-                  variant="ghost"
-                  className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={() => handleNavClick("#about")}
-                >
-                  About
-                </Button>
-
-                <div className="pt-3">
-                  <Button
-                    className="w-full bg-primary text-white font-medium rounded-full"
-                    onClick={() => handleNavClick("#contact")}
-                  >
-                    Get Started
-                  </Button>
-                </div>
               </div>
             </div>
           </div>

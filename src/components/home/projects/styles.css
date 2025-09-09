@@ -29,19 +29,22 @@
 
 @media (max-width: 768px) {
 
+    .images {
+        padding: 0 1rem 0 1rem;
+    }
+
     .image-container {
         height: 25rem;
         width: 23rem;
     }
 
-    /* .carousel {
-        height: 300vh;
+    .carousel {
+        height: 400vh;
     }
 
     .contentContainer {
-        height: 70vh;
-    } */
-
+        height: 100vh;
+    }
 
 }
 

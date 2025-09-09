@@ -53,7 +53,7 @@ const HomeTestimonialComp = () => {
   };
 
   return (
-    <div className="py-16 px-6">
+    <div className="py-16 px-6" id="testimonial">
       <div className="max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 bg-blue-50 rounded-2xl py-10 px-6 mx-auto">
         <div>
           <div className="text-4xl lg:text-6xl font-semibold text-gray-800">
