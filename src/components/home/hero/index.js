@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 
 const buildIcon = "/assets/images/home/building.svg";
 const supportIcon = "/assets/images/home/support-icon.svg";
@@ -40,7 +41,9 @@ export const HomeHeroComp = () => {
               We design and develop web-based solutions that empower businesses
               to grow with security and confidence.
             </p>
-            <Button className="rounded-2xl px-8 py-6">Contact Us</Button>
+            <ContactPopUpForm>
+              <Button className="rounded-2xl px-8 py-6">Contact Us</Button>
+            </ContactPopUpForm>
           </div>
           <div className="row-span-2">
             <div className="grid grid-cols-2 gap-4 h-full">

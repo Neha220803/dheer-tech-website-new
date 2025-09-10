@@ -11,6 +11,7 @@ import {
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import ContactPopUpForm from "../pop-up-form/ContactPopUpForm";
 
 export const HomeNavComp = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -119,12 +120,11 @@ export const HomeNavComp = () => {
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
               {/* CTA Button */}
-              <Button
-                className="bg-primary text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 hidden sm:flex"
-                onClick={() => handleNavClick("#contact")}
-              >
-                Get Started
-              </Button>
+              <ContactPopUpForm>
+                <Button className="bg-primary text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 hidden sm:flex">
+                  Get Started
+                </Button>
+              </ContactPopUpForm>
 
               {/* Mobile menu button */}
               <Button

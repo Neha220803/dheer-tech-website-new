@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 
 const TrophyCTA = () => {
   return (
@@ -41,13 +42,15 @@ const TrophyCTA = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-amber-600 hover:to-yellow-600"
-                  >
-                    Conatct Us Now
-                  </motion.button>
+                  <ContactPopUpForm>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-amber-600 hover:to-yellow-600"
+                    >
+                      Conatct Us Now
+                    </motion.button>
+                  </ContactPopUpForm>
                 </div>
 
                 <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-sm text-gray-500">
