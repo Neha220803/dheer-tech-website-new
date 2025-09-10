@@ -3,10 +3,40 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 import { useScroll, useTransform, motion } from "framer-motion";
-const one = "/assets/images/home/project1.png";
-const two = "/assets/images/home/project2.png";
-const three = "/assets/images/home/project3.png";
-const four = "/assets/images/home/project4.png";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+
+// Projects data array
+const projects = [
+  {
+    id: 1,
+    name: "Crown Of Spice",
+    image: "/assets/images/home/project2.png",
+    alt: "Crown Of Spice project",
+    link: "https://www.crownofspices.com/home",
+  },
+  {
+    id: 2,
+    name: "Adhi Construction",
+    image: "/assets/images/home/project1.png",
+    alt: "Adhi Construction project",
+    link: "https://adhiconstruction.us/",
+  },
+  {
+    id: 3,
+    name: "Madras Spice Corner",
+    image: "/assets/images/home/project3.png",
+    alt: "Madras Spice Corner project",
+    link: "https://coereats.com/madrasspicecorner",
+  },
+  {
+    id: 4,
+    name: "Maya Indian Cuisine",
+    image: "/assets/images/home/project4.png",
+    alt: "Maya Indian Cuisine project",
+    link: "https://www.mayaindiancuisineny.com/",
+  },
+];
 
 const HorizontalScrollProjectComp = () => {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -16,9 +46,9 @@ const HorizontalScrollProjectComp = () => {
       setIsDesktop(window.innerWidth >= 1024);
     };
     checkIfDesktop();
-    window.addEventListener("resize", checkIfDesktop); // Add resize listener
+    window.addEventListener("resize", checkIfDesktop);
 
-    return () => window.removeEventListener("resize", checkIfDesktop); // Cleanup
+    return () => window.removeEventListener("resize", checkIfDesktop);
   }, []);
 
   const targetRef = useRef(null);
@@ -28,8 +58,9 @@ const HorizontalScrollProjectComp = () => {
     [0, 1],
     ["0%", isDesktop ? "-55%" : "-72%"]
   );
+
   return (
-    <div className="carousel bg-neutral-700 " ref={targetRef} id="projects">
+    <div className="carousel bg-neutral-700" ref={targetRef} id="projects">
       <div className="projects-header">
         <h1 className="projects-title">PROJECTS</h1>
         <p className="projects-description">
@@ -45,58 +76,23 @@ const HorizontalScrollProjectComp = () => {
       </div>
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
-          <div className="imageItem">
-            <div className="image-container">
-              <img
-                className="project-image"
-                src={two}
-                alt="alt text goes here"
-              />
+          {projects.map((project) => (
+            <div key={project.id} className="imageItem md:gap-6">
+              <div className="image-container">
+                <img
+                  className="project-image"
+                  src={project.image}
+                  alt={project.alt}
+                />
+              </div>
+              <Link href={project.link}>
+                <div className="flex items-baseline justify-start gap-2 md:gap-3">
+                  <p className="project-name-text">{project.name}</p>
+                  <ExternalLink className="project-name-icon" />
+                </div>
+              </Link>
             </div>
-            <p className="project-name-text">Crown Of Spice</p>
-          </div>
-
-          <div className="imageItem">
-            <div className="image-container">
-              <img
-                className="project-image"
-                src={one}
-                alt="alt text goes here"
-              />
-            </div>
-            <p className="project-name-text">Adhi Construction</p>
-          </div>
-
-          <div className="imageItem">
-            <div className="image-container">
-              <img
-                className="project-image"
-                src={three}
-                alt="alt text goes here"
-              />
-            </div>
-            <p className="project-name-text">Madras Cooking kitchen</p>
-          </div>
-          <div className="imageItem">
-            <div className="image-container">
-              <img
-                className="project-image"
-                src={four}
-                alt="alt text goes here"
-              />
-            </div>
-            <p className="project-name-text">Maya Indian Cuisine</p>
-          </div>
-
-          {/* <div className="imageItem">
-            <ImageContainer imageSource={two} description="two image" />
-          </div>
-          <div className="imageItem">
-            <ImageContainer imageSource={three} description="three image" />
-          </div>
-          <div className="imageItem">
-            <ImageContainer imageSource={four} description="four image" />
-          </div> */}
+          ))}
         </motion.div>
       </div>
     </div>

@@ -64,7 +64,7 @@ const HomeStatsComp = () => {
 
   return (
     <div className="py-16 px-6">
-      <div className="max-w-6xl bg-color2-200 rounded-2xl py-10 px-6 mx-auto">
+      <div className="max-w-6xl bg-color2-50 rounded-2xl py-10 px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">

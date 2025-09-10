@@ -57,6 +57,10 @@
         height: 70%;
     }
 
+    .imageItem {
+        justify-content: center;
+    }
+
 }
 
 .project-image {
@@ -87,6 +91,12 @@
     font-weight: 400;
     line-height: 0.85;
     color: white;
+}
+
+.project-name-icon {
+    color: white;
+    width: 44px;
+    height: 44px;
 }
 
 .projects-description {
@@ -130,5 +140,10 @@
 
     .projects-description {
         font-size: 1rem;
+    }
+
+    .project-name-icon {
+        width: 24px;
+        height: 24px;
     }
 }
