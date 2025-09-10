@@ -41,7 +41,7 @@ export const HomeHeroComp = () => {
             </p>
             <Button className="rounded-2xl px-8 py-6">Contact Us</Button>
           </div>
-          <div className="row-span-2 ">
+          <div className="row-span-2">
             <div className="grid grid-cols-2 gap-4 h-full">
               <div className="col-span-2 md:col-span-1 h-full flex flex-col space-y-4 ">
                 <Card className="h-1/2 middle-col-cards">

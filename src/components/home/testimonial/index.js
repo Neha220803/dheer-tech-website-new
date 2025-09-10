@@ -14,8 +14,8 @@ const HomeTestimonialComp = () => {
       author: "Ocean Ayush Care Clinic",
     },
     {
-      text: "We reached out to DheerTech for our restaurant website designing and they did a great job. The design is beautiful and the final website was completed and launched on time. It’s very user friendly, making it easy for our customers to order online. We are extremely happy with their customer service and their professional nature. I would definitely recommend DheerTech for anyone looking for a smooth experience.",
-      author: "Taste of Chennai",
+      text: "DheerTech Inc built us a beautiful construction website and made it super secure. No more bots flooding our inbox thanks to their cybersecurity setup. The team was very flexible, paid attention to every detail, and delivered exactly what we needed. Great work and highly recommend!",
+      author: "Neeharika",
     },
     {
       text: "We worked with DheerTech to develop a website for my bakery. The end product was better than I had imagined and was blown away with the level of details included, along with the design. DheerTech has a great team and is extremely professional. They completed the work on time, with no glitches in between.",
