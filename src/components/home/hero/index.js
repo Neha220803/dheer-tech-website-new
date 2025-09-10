@@ -13,9 +13,10 @@ export const HomeHeroComp = () => {
   return (
     <section className="home-bg-section" id="home">
       <div className="max-w-5xl text-center md:my-10 mt-14 mb-6">
-        <h1 className="md:text-5xl text-3xl text-center font-semibold">
-          Delivering Smart Web Solutions for Growing Businesses with Dheer Tech
-          Inc
+        <h1 className="md:text-5xl text-3xl home-hero-heading text-center font-semibold">
+          Delivering Smart Web Solutions{" "}
+          <span className="hidden md:block ">for Growing Businesses</span> with
+          Dheer Tech Inc
         </h1>
       </div>
       <div className="grid grid-cols-12 gap-4  w-full">
