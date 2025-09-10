@@ -34,7 +34,7 @@ const HomeAboutComp = () => {
               </h1>
             </div>
 
-            <div className="text-xl md:text-2xl lg:text-3xl text-gray-700 text-left font-medium relative">
+            <div className="text-xl md:text-2xl lg:text-3xl text-gray-900 text-left font-medium relative">
               <TextSection
                 activeSection={activeSection}
                 sectionIndex={0}
@@ -80,7 +80,7 @@ const HomeAboutComp = () => {
 
 const TextSection = ({ activeSection, sectionIndex, text }) => {
   const opacity = useTransform(activeSection, (value) =>
-    Math.floor(value) === sectionIndex ? 1 : 0.3
+    Math.floor(value) === sectionIndex ? 1 : 0.6
   );
 
   return (
