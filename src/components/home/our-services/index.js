@@ -28,7 +28,9 @@ export const OurServiceComp = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h1 className="md:text-7xl text-4xl font-medium">Service We Provide</h1>
+        <div className="md:text-7xl text-4xl font-medium">
+          Service We Provide
+        </div>
       </motion.div>
 
       <div className="space-y-4 md:max-w-4xl">
@@ -48,7 +50,9 @@ export const OurServiceComp = () => {
                   alt="icon"
                   className="service-icons rounded"
                 />
-                <h2 className="md:text-2xl text-xl">Custom Web Application</h2>
+                <div className="md:text-2xl text-xl">
+                  Custom Web Application
+                </div>
                 <p className="text-sm md:text-md">
                   We build custom web applications tailored to your business
                   needs.
@@ -67,9 +71,9 @@ export const OurServiceComp = () => {
             <Card className="h-full rounded-2xl">
               <CardContent>
                 <img src={cyberSec} alt="icon" className="service-icons" />
-                <h2 className="md:text-2xl text-xl">
+                <div className="md:text-2xl text-xl">
                   Cyber Security Protection
-                </h2>
+                </div>
                 <p className="text-sm md:text-md">
                   We provide top-notch cyber security solutions to protect your
                   business from online threats.
@@ -91,7 +95,7 @@ export const OurServiceComp = () => {
             <Card className="h-full rounded-2xl">
               <CardContent>
                 <img src={aiTool} alt="icon" className="service-icons" />
-                <h2 className="md:text-2xl text-xl">AI & Automation Tools</h2>
+                <div className="md:text-2xl text-xl">AI & Automation Tools</div>
                 <p className="text-sm md:text-md">
                   We leverage AI and automation to optimize business processes
                   and enhance productivity.
@@ -110,7 +114,7 @@ export const OurServiceComp = () => {
             <Card className="h-full rounded-2xl">
               <CardContent>
                 <img src={softDev} alt="icon" className="service-icons" />
-                <h2 className="md:text-2xl text-xl">Software Development</h2>
+                <div className="md:text-2xl text-xl">Software Development</div>
                 <p className="text-sm md:text-md">
                   We offer comprehensive software development services to bring
                   your ideas to life.
@@ -129,7 +133,7 @@ export const OurServiceComp = () => {
             <Card className="h-full rounded-2xl">
               <CardContent>
                 <img src={eCom} alt="icon" className="service-icons" />
-                <h2 className="md:text-2xl text-xl">E-Commerce Platform</h2>
+                <div className="md:text-2xl text-xl">E-Commerce Platform</div>
                 <p className="text-sm md:text-md">
                   We create robust e-commerce platforms that drive sales and
                   enhance user experience.

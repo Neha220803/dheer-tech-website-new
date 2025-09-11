@@ -19,19 +19,23 @@ const HomeAboutComp = () => {
   );
 
   return (
-    <div ref={containerRef} className="relative h-[300vh] w-full " id="about">
+    <div
+      ref={containerRef}
+      className="relative h-[150vh] md:h-[300vh] w-full "
+      id="about"
+    >
       <div className="sticky top-0 h-screen w-full overflow-hidden pb-5">
         <BackgroundElements />
 
         <div className="relative z-10 flex flex-col justify-end h-full w-full px-4">
           <div className="max-w-4xl mx-auto w-full">
             <div className="mb-8">
-              <h1 className="font-bold text-primary opacity-75 text-4xl md:text-7xl ">
+              <div className="font-bold text-primary opacity-75 text-4xl md:text-7xl ">
                 ABOUT
-              </h1>
-              <h1 className="font-bold text-primary-light text-4xl md:text-7xl ">
+              </div>
+              <div className="font-bold text-primary-light text-4xl md:text-7xl ">
                 OUR COMPANY
-              </h1>
+              </div>
             </div>
 
             <div className="text-xl md:text-2xl lg:text-3xl text-gray-900 text-left font-medium relative">
@@ -80,7 +84,7 @@ const HomeAboutComp = () => {
 
 const TextSection = ({ activeSection, sectionIndex, text }) => {
   const opacity = useTransform(activeSection, (value) =>
-    Math.floor(value) === sectionIndex ? 1 : 0.6
+    Math.floor(value) === sectionIndex ? 1 : 0.4
   );
 
   return (

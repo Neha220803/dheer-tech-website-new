@@ -62,7 +62,7 @@ const HorizontalScrollProjectComp = () => {
   return (
     <div className="carousel bg-neutral-700" ref={targetRef} id="projects">
       <div className="projects-header">
-        <h1 className="projects-title">PROJECTS</h1>
+        <div className="projects-title">PROJECTS</div>
         <p className="projects-description">
           We don't just build websites, we craft digital experiences. Every
           pixel tells a story, every interaction sparks joy. Our team blends
@@ -77,7 +77,7 @@ const HorizontalScrollProjectComp = () => {
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
           {projects.map((project) => (
-            <div key={project.id} className="imageItem md:gap-6">
+            <div key={project.id} className="imageItem gap-6">
               <div className="image-container">
                 <img
                   className="project-image"

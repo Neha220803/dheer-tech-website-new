@@ -128,7 +128,9 @@ const ContactForm = ({ showTitle = false }) => {
     <>
       <div className="max-w-md mx-auto p-6 border bg-white rounded-lg shadow-sm">
         {showTitle && (
-          <h2 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h2>
+          <div className="text-2xl font-bold mb-6 text-gray-800">
+            Contact Us
+          </div>
         )}
 
         <Form {...form}>
