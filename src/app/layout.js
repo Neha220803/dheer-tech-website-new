@@ -1,6 +1,8 @@
 import { Inter_Tight, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import { HomeNavComp } from "@/components/nav";
+// import WhatsappButtonsComp from "@/components/whatsapp-button/WhatsappButtons";
+import { Toaster } from "@/components/ui/sonner";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -33,6 +35,8 @@ export default function RootLayout({ children }) {
       >
         <HomeNavComp />
         {children}
+        {/* <WhatsappButtonsComp /> */}
+        <Toaster richColors />
       </body>
     </html>
   );
