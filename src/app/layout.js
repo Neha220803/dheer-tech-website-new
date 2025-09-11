@@ -19,9 +19,9 @@ const robotoSlab = Roboto_Slab({
 });
 
 export const metadata = {
-  title: "Dheer Tech Inc",
+  title: "DheerTech Inc",
   description:
-    "Dheer Tech Inc is a leading Software Development company specializing in creating secure, scalable, and smart web-based solutions for businesses of all sizes.",
+    "DheerTech Inc is a leading Software Development company specializing in creating secure, scalable, and smart web-based solutions for businesses of all sizes.",
   icons: {
     icon: "/assets/images/logo/logo-circle.png",
   },

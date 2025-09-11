@@ -56,14 +56,14 @@ export const HomeNavComp = () => {
               <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
                 <Image
                   src="/assets/images/logo/logo.jpeg"
-                  alt="Dheer Tech Inc"
+                  alt="DheerTech Inc"
                   width={24}
                   height={24}
                   className="rounded-full"
                 />
               </div>
               <span className="font-bold text-lg transition-color text-gray-900">
-                Dheer Tech
+                DheerTech Inc
               </span>
             </div>
 

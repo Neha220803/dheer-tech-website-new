@@ -17,7 +17,7 @@ export const HomeHeroComp = () => {
         <h1 className="md:text-5xl text-3xl home-hero-heading text-center font-semibold">
           Delivering Smart Web Solutions{" "}
           <span className="hidden md:block ">for Growing Businesses</span>
-          with Dheer Tech Inc
+          with DheerTech Inc
         </h1>
       </div>
       <div className="grid grid-cols-12 gap-4  w-full">

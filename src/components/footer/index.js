@@ -33,7 +33,7 @@ const FooterComp = () => {
               </div>
               <div className="flex flex-col md:flex-row text-white justify-between md:items-end">
                 <h1 className="text-[10vw] leading-[0.8] mt-10">
-                  Dheer Tech Inc
+                  DheerTech Inc
                 </h1>
                 <p>©DheerTech, All rights reserved</p>
               </div>
