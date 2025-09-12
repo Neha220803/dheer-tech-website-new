@@ -24,7 +24,7 @@ export const HomeHeroComp = () => {
         {/* First column */}
         <div className="md:col-span-3 col-span-12 flex items-center justify-center ">
           <div className="left-grid-big-card h-full">
-            <div className="z-1000">
+            <div className="z-999">
               <div className="text-2xl font-medium">
                 Innovation Meets Security
               </div>
@@ -117,7 +117,7 @@ export const HomeHeroComp = () => {
         {/* Third column */}
         <div className="md:col-span-3 hidden md:flex items-center justify-center ">
           <div className="left-grid-big-right-card h-full">
-            <div className="z-1000">
+            <div className="z-999">
               <div className="text-2xl font-medium">
                 Build Once, Scale Forever
               </div>

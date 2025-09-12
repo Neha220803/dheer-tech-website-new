@@ -14,6 +14,7 @@
     align-items: center !important;
     justify-content: center !important;
     text-decoration: none !important;
+    z-index: 1000;
     transition: all 0.3s ease !important;
 }
 
