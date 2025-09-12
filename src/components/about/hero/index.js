@@ -2,32 +2,36 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import "./styles.css";
 import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
+import { ArrowBigRight } from "lucide-react";
 
-const aboutHeroImg = "/assets/images/about/about-hero.png";
+const aboutHeroImg = "/assets/images/about/about-hero2.png";
 
 const AboutHeroComp = () => {
   return (
-    <section className="flex justify-center items-center ">
-      <div className="flex justify-center items-center max-w-6xl ">
-        <div className="w-1/2  ">
-          <div className="w-4/5 flex justify-center items-start flex-col gap-4 ">
-            <h1 className="text-2xl font-bold">
-              Innovating <span className="text-primary-400">Today</span> for a
-              Secure Tomorrow.
-            </h1>
-            <p>
-              At DheerTech, innovation meets protection. We are a team of
-              skilled engineers, designers, and cyber coders who specialize in
-              building secure, scalable, and intuitive web-based solutions. Our
-              mission is simple - empower businesses to grow smarter while
-              staying safe in the digital age.
-            </p>
-            <ContactPopUpForm>
-              <Button>Contact Us</Button>
-            </ContactPopUpForm>
-          </div>
+    <section className="flex items-center">
+      <div className="max-w-7xl grid grid-cols-2 py-10 px-6 mx-auto">
+        <div className="space-y-3">
+          <h1 className="">Building the Future, Securing the Present.</h1>
+          <p>
+            At DheerTech, we are more than developers — we are digital
+            protectors. Along with designing cutting-edge web applications, our
+            experienced cyber coders specialize in shielding websites and
+            software from hackers, data breaches, and evolving cyber threats.
+          </p>
+          <p>
+            Think of our security layer as a vaccine for your software — built
+            to defend against malware, ransomware, and viruses before they
+            strike. From firewall configurations and end-to-end encryption to
+            real-time vulnerability monitoring, our team ensures that every
+            platform we deliver is secure, stable, and future-ready.
+          </p>
+          <ContactPopUpForm>
+            <Button size={"lg"}>
+              Lets Connect Now <ArrowBigRight />
+            </Button>
+          </ContactPopUpForm>
         </div>
-        <div className="w-1/2 flex justify-end items-center ">
+        <div className=" flex justify-end">
           <img
             src={aboutHeroImg}
             alt="about hero img"

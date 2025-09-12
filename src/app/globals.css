@@ -177,3 +177,107 @@ section {
   min-height: 100vh;
   padding: 4rem 2rem;
 }
+
+h1 {
+  font-size: 48px;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+h2 {
+  font-size: 40px;
+  font-optical-sizing: auto;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 28px;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 22px;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+p {
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 991px) {
+  h1 {
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 761px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
