@@ -135,7 +135,7 @@
 
 /* Style content */
 .section-timeline .timeline .content {
-    border: 3px solid var(--color-primary-400);
+    border: 2px dotted var(--color-primary-400);
     position: absolute;
     min-width: 180px;
     width: 500px;
@@ -157,7 +157,7 @@
 }
 
 .section-timeline .timeline .content p {
-    font-size: 14;
+    font-size: 16;
     line-height: 1.3;
 }
 
