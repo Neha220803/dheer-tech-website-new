@@ -1,0 +1,29 @@
+.location-1-card {
+    background-image: url('../../../../public/assets/images/contact/new-york.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.location-2-card {
+    background-image: url('../../../../public/assets/images/contact/kanyakumari.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.black-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, #372b2b00 0%, #a20d0d8f 100%);
+    z-index: 500;
+}

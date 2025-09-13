@@ -126,9 +126,9 @@ const ContactForm = ({ showTitle = false }) => {
 
   return (
     <>
-      <div className="max-w-md w-full p-6 border bg-white rounded-3xl shadow-sm">
+      <div className="max-w-md w-full md:p-6 p-4 border bg-white rounded-3xl shadow-sm">
         {showTitle && (
-          <div className="mb-6 text-center space-y-2">
+          <div className=" mb-4 text-center space-y-2">
             <h3 className="text-2xl font-bold text-gray-800">
               Let's Connect to Build Something Great!
             </h3>
@@ -139,7 +139,10 @@ const ContactForm = ({ showTitle = false }) => {
         )}
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="md:space-y-6 space-y-4"
+          >
             <FormField
               control={form.control}
               name="name"

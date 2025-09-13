@@ -291,4 +291,8 @@ p {
   p {
     font-size: 12px;
   }
+
+  section {
+    padding: 2.2rem 1.2rem;
+  }
 }
