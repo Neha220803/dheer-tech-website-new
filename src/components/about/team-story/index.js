@@ -70,7 +70,7 @@ const AboutTeamStoryComp = () => {
                 <img
                   src={content[hoveredCardIndex].path}
                   alt="content image"
-                  className="rounded-lg absolute bottom-4 right-4 w-1/3 h-auto"
+                  className="rounded-lg absolute bottom-0 right-4 w-1/3 h-auto"
                 />
                 <div className="space-y-2">
                   {content[hoveredCardIndex].paragraphs.map(
