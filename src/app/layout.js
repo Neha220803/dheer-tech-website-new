@@ -3,6 +3,7 @@ import "./globals.css";
 import { HomeNavComp } from "@/components/nav";
 import WhatsappButtonsComp from "@/components/whatsapp-button/WhatsappButtons";
 import { Toaster } from "@/components/ui/sonner";
+import FooterComp from "@/components/footer";
 
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         <HomeNavComp />
         {children}
         <WhatsappButtonsComp />
+        <FooterComp />
       </body>
     </html>
   );

@@ -33,7 +33,6 @@ export default function Home() {
       <HomeTestimonialComp />
       <TimelineStickyComp />
       <HomeCTAComp />
-      <FooterComp />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const aboutHeroImg = "/assets/images/about/about-hero2.png";
 const AboutHeroComp = () => {
   return (
     <section className="flex items-center">
-      <div className="max-w-7xl grid grid-cols-2 py-10 px-6 mx-auto">
+      <div className="md:max-w-7xl grid md:grid-cols-2 gap-3 grid-cols-1 md:py-10 md:px-6 mx-auto">
         <div className="space-y-3">
           <h1 className="">Building the Future, Securing the Present.</h1>
           <p>

@@ -126,10 +126,15 @@ const ContactForm = ({ showTitle = false }) => {
 
   return (
     <>
-      <div className="max-w-md mx-auto p-6 border bg-white rounded-lg shadow-sm">
+      <div className="max-w-md w-full p-6 border bg-white rounded-3xl shadow-sm">
         {showTitle && (
-          <div className="text-2xl font-bold mb-6 text-gray-800">
-            Contact Us
+          <div className="mb-6 text-center space-y-2">
+            <h3 className="text-2xl font-bold text-gray-800">
+              Let's Connect to Build Something Great!
+            </h3>
+            <h6 className="text-gray-400">
+              Websites, Apps, and Digital Solutions tailored for your business
+            </h6>
           </div>
         )}
 
@@ -227,6 +232,19 @@ const ContactForm = ({ showTitle = false }) => {
       </div>
 
       <Toaster richColors />
+
+      <style jsx global>{`
+        section[aria-label="Notifications alt+T"] {
+          height: auto !important;
+          min-height: auto !important;
+          position: fixed !important;
+          z-index: 9999 !important;
+        }
+
+        [data-sonner-toaster] {
+          height: auto !important;
+        }
+      `}</style>
     </>
   );
 };
