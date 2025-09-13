@@ -139,12 +139,9 @@
     position: absolute;
     min-width: 180px;
     width: 500px;
-    border-radius: 10px;
     overflow: hidden;
     top: 50%;
     transform: translateY(-50%);
-    /* max-height: 120px; */
-    /* box-shadow: 0 15px 25px -20px rgba(0, 0, 0, .2); */
 }
 
 .section-timeline .timeline li:nth-child(odd) .content {
@@ -159,13 +156,126 @@
     padding: .5rem;
 }
 
-/* 
-.section-timeline .timeline li:nth-child(1) h3 {
-    background-color: #e74c3c;
-}
- */
-
 .section-timeline .timeline .content p {
     font-size: 14;
     line-height: 1.3;
+}
+
+@media (max-width: 456px) {
+
+    /* Remove container padding */
+    .section-timeline .container {
+        padding-left: 0;
+        padding-right: 15px;
+        max-width: 100%;
+    }
+
+    /* Reset timeline positioning */
+    .section-timeline .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 40px;
+        /* Just enough space for line and numbers */
+        margin: 40px 0 30px 0;
+        /* Remove left margin */
+        position: relative;
+    }
+
+    /* Reset list items to normal flow */
+    .section-timeline .timeline li {
+        position: relative;
+        height: auto;
+        width: auto;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        left: 0;
+        top: auto;
+        transform: none;
+        display: block;
+    }
+
+    /* Create straight vertical line at far left */
+    .section-timeline .timeline::before {
+        content: '';
+        position: absolute;
+        left: 24px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: var(--clr-border-timeline);
+        z-index: 0;
+    }
+
+    /* Position numbered circles on the line */
+    .section-timeline .timeline li:before {
+        position: absolute;
+        left: -30px !important;
+        top: 15px;
+        transform: none;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: var(--clr-border-timeline);
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    /* Content starts from very left edge */
+    .section-timeline .timeline .content {
+        position: static;
+        width: calc(100vw - 50px);
+        /* Use almost full screen width */
+        max-width: none;
+        min-width: auto;
+        border: 3px solid var(--color-primary-400);
+        border-radius: 10px;
+        /* padding: 1rem; */
+        margin: 2px;
+        top: auto;
+        left: 0;
+        right: auto;
+        transform: none;
+    }
+
+    /* Remove all hardcoded positioning */
+    .section-timeline .timeline li:nth-child(2),
+    .section-timeline .timeline li:nth-child(3),
+    .section-timeline .timeline li:nth-child(4),
+    .section-timeline .timeline li:nth-child(5) {
+        top: auto;
+    }
+
+    /* Reset odd/even positioning */
+    .section-timeline .timeline li:nth-child(odd) .content,
+    .section-timeline .timeline li:nth-child(even) .content {
+        left: 0;
+        right: auto;
+        position: static;
+    }
+
+    .section-timeline .timeline li:nth-child(odd),
+    .section-timeline .timeline li:nth-child(even) {
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        left: 0;
+        transform: none;
+    }
+
+    .section-timeline .timeline li:nth-child(odd):before,
+    .section-timeline .timeline li:nth-child(even):before {
+        left: -25px;
+        transform: none;
+        display: hidden;
+    }
+
+    .section-timeline .timeline li:nth-child(1):after,
+    .section-timeline .timeline li:last-child:after {
+        display: none;
+    }
 }
