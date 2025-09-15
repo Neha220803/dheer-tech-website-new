@@ -12,16 +12,21 @@ const ServicesPage = () => {
   return (
     <>
       <section className="flex items-center bg-primar ">
-        <div className="md:max-w-7xl h-full bg-secondar py-10 md:px-6 mx-auto w-full">
-          <div className="text-center mb-4">
+        <div className="md:max-w-7xl h-full bg-secondar py-10 md:px-6 mx-auto w-full space-y-2 ">
+          <div className="text-center flex flex-col justify-center items-center mb-4">
             <h1>Our Services</h1>
-            <p>Tailored solution designed for your business growth</p>
+            <p className="md:w-4/5">
+              At DheerTech, we build smart, scalable, and secure digital
+              solutions that help businesses thrive in today's competitive
+              world. From powerful websites to custom CRMs, we combine
+              innovation, technology, and design to deliver results that matter.
+            </p>
           </div>
           <div className="grid grid-cols-12 gap-2 md:gap-4 h-full w-full">
             {/* First column */}
-            <div className="md:col-span-6 col-span-12 md:grid md:grid-rows-3 space-y-2  gap-2">
+            <div className="md:col-span-6 col-span-12 md:grid md:grid-rows-6 space-y-2  gap-2">
               <div
-                className="row-span-2 flex flex-col justify-center service-card-img-bg"
+                className="row-span-3 flex flex-col justify-center service-card-img-bg"
                 id="first-service"
               >
                 <div className="space-y-1">
@@ -29,9 +34,10 @@ const ServicesPage = () => {
                     Custom Web Applications
                   </h4>
                   <div className="text-xs md:text-sm">
-                    We specialize in creating custom web applications that meet
-                    your unique business requirements. Experience seamless
-                    integration and enhanced performance with our solutions.
+                    Your website defines digital identity. We design responsive,
+                    user-friendly, optimized websites that impress, engage, and
+                    convert, ensuring stronger online presence that builds
+                    trust, growth, and lasting connections.
                   </div>
                 </div>
                 <div>
@@ -53,10 +59,11 @@ const ServicesPage = () => {
                 >
                   <div className="space-y-1">
                     <h4 className="text-xl font-medium">
-                      Cyber Security Protection
+                      Business Essentials Designing
                     </h4>
                     <div className="text-xs md:text-sm">
-                      Protect your business from evolving online threats.
+                      We craft logos, pitch decks, brochures, presentations,
+                      branding.
                     </div>
                   </div>
                   <div>
@@ -76,12 +83,9 @@ const ServicesPage = () => {
                   id="third-service"
                 >
                   <div className="space-y-1">
-                    <h4 className="text-xl font-medium">
-                      Al & Automation Tools
-                    </h4>
+                    <h4 className="text-xl font-medium">Digital Marketing</h4>
                     <div className="text-xs md:text-sm">
-                      Enhance productivity with our intelligent automation
-                      solutions.
+                      Our experts boost visibility with SEO, social, PPC, email.
                     </div>
                   </div>
 
@@ -98,19 +102,77 @@ const ServicesPage = () => {
                   </div>
                 </div>
               </div>
+              <div
+                className="row-span-2 flex flex-col gap-2 service-card-img-bg"
+                id="seventh-service"
+              >
+                <div className="space-y-1">
+                  <h4 className="text-2xl md:text-3xl font-medium">
+                    Software Development
+                  </h4>
+                  <div className="text-xs md:text-sm">
+                    We build tailored web applications, from automation to data
+                    systems, focusing on scalability, speed, and security to
+                    streamline operations, productivity, and growth.
+                  </div>
+                </div>
+                <div>
+                  <ContactPopUpForm>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="md:bg-secondary md:text-secondary-foreground md:shadow-xs md:hover:bg-secondary/80 px-0 md:px-3"
+                    >
+                      Learn More
+                    </Button>
+                  </ContactPopUpForm>
+                </div>
+              </div>
             </div>
 
             {/* Second column - nested grid with 2 rows */}
-            <div className="md:col-span-6 col-span-12 md:grid md:grid-rows-3 space-y-2 gap-2  ">
+            <div className="md:col-span-6 col-span-12 md:grid md:grid-rows-6 space-y-2 gap-2  ">
               <div
-                className="row-span-1 service-card-img-bg "
-                id="fourth-service"
+                className="row-span-2 flex flex-col gap-2 service-card-img-bg"
+                id="sixth-service"
               >
                 <div className="space-y-1">
-                  <h4 className="text-2xl font-medium">Software Development</h4>
+                  <h4 className="text-2xl md:text-3xl font-medium">
+                    Cyber Security Protection
+                  </h4>
                   <div className="text-xs md:text-sm">
-                    From concept to launch, we tailor software development to
-                    your specific business needs and goals.
+                    Security drives everything we build. With secure coding,
+                    encryption, and compliance, we protect applications from
+                    vulnerabilities, threats, breaches, ensuring business
+                    growth.
+                  </div>
+                </div>
+                <div>
+                  <ContactPopUpForm>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="md:bg-secondary md:text-secondary-foreground md:shadow-xs md:hover:bg-secondary/80 px-0 md:px-3"
+                    >
+                      Learn More
+                    </Button>
+                  </ContactPopUpForm>
+                </div>
+              </div>
+
+              <div
+                className="row-span-3 flex flex-col gap-2 service-card-img-bg"
+                id="fivth-service"
+              >
+                <div className="space-y-1">
+                  <h4 className="text-2xl md:text-3xl font-medium">
+                    E-Commerce Platforms
+                  </h4>
+                  <div className="text-xs md:text-sm">
+                    Our e-commerce solutions are built to boost sales, enhance
+                    customer experiences, and expand visibility. Partner with us
+                    to strengthen online presence, achieve growth, and long-term
+                    success.
                   </div>
                 </div>
                 <div>
@@ -126,17 +188,17 @@ const ServicesPage = () => {
                 </div>
               </div>
               <div
-                className="row-span-2 flex flex-col gap-2 service-card-img-bg"
-                id="fivth-service"
+                className="row-span-1 service-card-img-bg "
+                id="fourth-service"
               >
                 <div className="space-y-1">
-                  <h4 className="text-2xl md:text-3xl font-medium">
-                    E-Commerce Platforms
+                  <h4 className="text-2xl font-medium">
+                    AI & Automation Tools
                   </h4>
                   <div className="text-xs md:text-sm">
-                    Our e-commerce solutions are designed to increase sales and
-                    enhance customer experiences. Grow your online presence with
-                    us
+                    We develop AI-powered automation tools that streamline
+                    workflows, improve efficiency, reduce costs, and accelerate
+                    business growth.
                   </div>
                 </div>
                 <div>
