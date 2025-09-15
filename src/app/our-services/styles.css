@@ -20,6 +20,7 @@
         padding: 24px;
         gap: 12px;
         justify-content: space-between;
+        min-height: 230px;
     }
 
 

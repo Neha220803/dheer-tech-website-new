@@ -90,7 +90,7 @@ const TextSection = ({ activeSection, sectionIndex, text }) => {
   return (
     <motion.div
       style={{ opacity }}
-      className="mb-4 transition-opacity duration-500"
+      className="mb-4 transition-opacity duration-500 text-justify"
     >
       {text}
     </motion.div>
