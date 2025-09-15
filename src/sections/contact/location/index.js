@@ -7,24 +7,31 @@ const ContactLocationComp = () => {
     <section className="flex justify-center">
       <div className="max-w-7xl w-full space-y-3">
         <h1>Our Offices</h1>
-        <div className=" h-[50vh] grid md:grid-cols-2 grid-cols-1 gap-4">
+        <div className=" md:h-[50vh] grid md:grid-cols-3 grid-cols-1 gap-4">
           <div className="flex flex-col items-center justify-end h-full  location-1-card">
             <div className="black-overlay z-900"></div>
-            <div className="z-999 flex text-center flex-col items-center text-white p-12 md:w-2/5 ">
-              <MapPin className="text-primary" />
+            <div className="z-999 flex text-center gap-2 items-center text-white p-12 ">
+              <MapPin className="text-white" />
               <div className="text-2xl font-medium">New York</div>
-              <p>34 Garden Blvd, Hicksville NY 11801</p>
+              {/* <p>34 Garden Blvd, Hicksville NY 11801</p> */}
+            </div>
+          </div>
+          <div className="flex flex-col items-center justify-end h-full location-3-card">
+            <div className="black-overlay"></div>
+            <div className="z-999 flex text-center gap-2 items-center text-white p-12 ">
+              <MapPin className="text-white" />
+              <div className="text-2xl font-medium">Chennai</div>
             </div>
           </div>
           <div className="flex flex-col items-center justify-end h-full location-2-card">
             <div className="black-overlay"></div>
-            <div className="z-999 text-center flex flex-col items-center text-white p-12 md:w-3/5 ">
-              <MapPin className="text-primary" />
+            <div className="z-999 flex text-center gap-2 items-center text-white p-12 ">
+              <MapPin className="text-white" />
               <div className="text-2xl font-medium">Kaniyakumari</div>
-              <p>
+              {/* <p>
                 2/49 Kattuvilai, Kattadurai Post,Kaniyakumari District
                 629158,Tamil Nadu, India.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

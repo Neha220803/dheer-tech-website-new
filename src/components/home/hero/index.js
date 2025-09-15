@@ -20,10 +20,10 @@ export const HomeHeroComp = () => {
           with DheerTech Inc
         </h1>
       </div>
-      <div className="grid grid-cols-12 gap-4  w-full">
+      <div className="grid grid-cols-12 gap-4 w-full">
         {/* First column */}
         <div className="md:col-span-3 col-span-12 flex items-center justify-center ">
-          <div className="left-grid-big-card h-full">
+          <div className="left-grid-big-card w-full h-full">
             <div className="z-999">
               <div className="text-2xl font-medium">
                 Innovation Meets Security
