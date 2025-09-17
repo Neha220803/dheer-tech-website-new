@@ -1,5 +1,3 @@
-"use client";
-
 import HomeAboutComp from "@/components/home/about";
 import { HomeHeroComp } from "@/components/home/hero";
 import HomeCTAComp from "@/components/home/homeCTA";
