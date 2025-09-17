@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const AnimatedCounter = ({ targetNumber, suffix = "" }) => {
   const [displayNumber, setDisplayNumber] = useState(0);
@@ -36,6 +36,8 @@ const AnimatedCounter = ({ targetNumber, suffix = "" }) => {
 
 const HomeStatsComp = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const componentRef = useRef(null);
 
   const stats = [
     {
@@ -56,17 +58,35 @@ const HomeStatsComp = () => {
   ];
 
   useEffect(() => {
-    // Trigger animation on component mount
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setIsVisible(true);
+            setHasAnimated(true); // Prevent re-animation
+          }
+        });
+      },
+      {
+        threshold: 0.4, // Trigger when 30% of the component is visible
+        rootMargin: "0px 0px -50px 0px", // Optional: adjust trigger point
+      }
+    );
 
-    return () => clearTimeout(timer);
-  }, []);
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, [hasAnimated]);
 
   return (
-    <div className="py-16 px-6">
-      <div className="max-w-6xl bg-color2-50 rounded-2xl py-10 px-6 mx-auto">
+    <div className="py-16 px-6" ref={componentRef}>
+      <div className="max-w-6xl bg-blue-50 rounded-2xl py-10 px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
