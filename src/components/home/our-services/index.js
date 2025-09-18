@@ -19,10 +19,7 @@ const custWebApp = "/assets/images/services/cust-web-dev.svg";
 
 export const OurServiceComp = () => {
   return (
-    <section
-      className="flex overflow-hidden flex-col items-center space-y-10"
-      id="services"
-    >
+    <section className="flex overflow-hidden flex-col items-center space-y-10">
       {/* Animated Title */}
       <motion.div
         variants={titleVariants}

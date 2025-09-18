@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 
 const AboutOurApproachComp = () => {
   return (
-    <div className="overflow-hidden">
-      <section className="section-timeline md:space-y-8 space-y-0">
+    <div className="overflow-hidden bg-neutral-700">
+      <section className="section-timeline md:space-y-8 space-y-0 rounded-b-4xl bg-white">
         <div className="flex flex-col gap-4 items-center text-center">
           <h1 className="text-center">Our Approach</h1>
           <p className="text-gray-600 md:w-3/5">

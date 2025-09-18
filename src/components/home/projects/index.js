@@ -60,7 +60,7 @@ const HorizontalScrollProjectComp = () => {
   );
 
   return (
-    <div className="carousel bg-neutral-700" ref={targetRef} id="projects">
+    <div className="carousel bg-neutral-700" ref={targetRef}>
       <div className="projects-header">
         <div className="projects-title">PROJECTS</div>
         <p className="projects-description">

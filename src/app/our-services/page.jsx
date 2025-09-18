@@ -10,8 +10,8 @@ const AiImg = "/public/assets/images/services/ai-bg.png";
 
 const ServicesPage = () => {
   return (
-    <>
-      <section className="flex items-center bg-primar ">
+    <div className="bg-neutral-700">
+      <section className="flex items-center rounded-b-4xl bg-white">
         <div className="md:max-w-7xl h-full bg-secondar py-10 md:px-6 mx-auto w-full space-y-2 ">
           <div className="text-center flex flex-col justify-center items-center mb-4">
             <h1>Our Services</h1>
@@ -217,7 +217,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

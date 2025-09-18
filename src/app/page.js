@@ -9,7 +9,7 @@ import HomeTimelineComp2 from "@/components/home/timeline/index2";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <HomeHeroComp />
       <HomeAboutComp />
       <HomeStatsComp />
@@ -18,6 +18,6 @@ export default function Home() {
       <HomeTestimonialComp />
       <HomeTimelineComp2 />
       <HomeCTAComp />
-    </div>
+    </>
   );
 }

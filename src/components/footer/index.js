@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const FooterComp = () => {
@@ -14,11 +15,36 @@ const FooterComp = () => {
                 <div className="flex shrink-0 gap-20">
                   <div className="flex flex-col gap-2">
                     <h3 className="mb-2 uppercase text-[#ffffff80]">Links</h3>
-                    <p>Home</p>
-                    <p>About</p>
-                    <p>Services</p>
-                    <p>Projects</p>
-                    <p>Contact Us</p>
+                    <Link
+                      href="/"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/about"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      About
+                    </Link>
+                    <Link
+                      href="/our-services"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Services
+                    </Link>
+                    <Link
+                      href="/projects"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Projects
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Contact Us
+                    </Link>
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="mb-2 uppercase text-[#ffffff80]">
@@ -27,7 +53,7 @@ const FooterComp = () => {
                     <p>Facebook</p>
                     <p>Linkedin</p>
                     <p>YouTube</p>
-                    <p>Facebook</p>
+                    <p>Instagram</p>
                   </div>
                 </div>
               </div>

@@ -3,6 +3,7 @@ import "./styles.css";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
+import Link from "next/link";
 
 const buildIcon = "/assets/images/home/building.svg";
 const supportIcon = "/assets/images/home/support-icon.svg";
@@ -12,7 +13,7 @@ const settingsIcon = "/assets/images/home/settings-icon.svg";
 
 export const HomeHeroComp = () => {
   return (
-    <section className="home-bg-section" id="home">
+    <section className="home-bg-section">
       <div className="max-w-5xl text-center md:my-10 mt-14 mb-6">
         <h1 className="md:text-5xl text-3xl home-hero-heading text-center font-semibold">
           Delivering Smart Web Solutions{" "}
@@ -41,9 +42,9 @@ export const HomeHeroComp = () => {
               We design and develop web-based solutions that empower businesses
               to grow with security and confidence.
             </p>
-            <ContactPopUpForm>
-              <Button className="rounded-2xl px-8 py-6">Contact Us</Button>
-            </ContactPopUpForm>
+            <Link href="/our-services">
+              <Button className="rounded-2xl px-8 py-6">Learn More</Button>
+            </Link>
           </div>
           <div className="row-span-2">
             <div className="grid grid-cols-2 gap-4 h-full">

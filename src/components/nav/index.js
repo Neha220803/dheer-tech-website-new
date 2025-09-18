@@ -11,9 +11,10 @@ import {
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import ContactPopUpForm from "../pop-up-form/ContactPopUpForm";
+import { useRouter } from "next/navigation";
 
 export const HomeNavComp = () => {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,11 +28,8 @@ export const HomeNavComp = () => {
   }, []);
 
   const handleNavClick = (href) => {
-    setIsMobileMenuOpen(false);
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    router.push(href);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const toggleMobileMenu = () => {
@@ -73,7 +71,7 @@ export const HomeNavComp = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                    onClick={() => handleNavClick("#home")}
+                    onClick={() => handleNavClick("/")}
                   >
                     Home
                   </NavigationMenuLink>
@@ -82,7 +80,7 @@ export const HomeNavComp = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                    onClick={() => handleNavClick("#about")}
+                    onClick={() => handleNavClick("/about")}
                   >
                     About
                   </NavigationMenuLink>
@@ -91,7 +89,7 @@ export const HomeNavComp = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                    onClick={() => handleNavClick("#services")}
+                    onClick={() => handleNavClick("/our-services")}
                   >
                     Services
                   </NavigationMenuLink>
@@ -100,18 +98,9 @@ export const HomeNavComp = () => {
                 <NavigationMenuItem>
                   <NavigationMenuLink
                     className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                    onClick={() => handleNavClick("#projects")}
+                    onClick={() => handleNavClick("/projects")}
                   >
                     Projects
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
-                    onClick={() => handleNavClick("#testimonial")}
-                  >
-                    Testimonial
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
@@ -119,22 +108,18 @@ export const HomeNavComp = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
-              {/* CTA Button */}
-              <ContactPopUpForm>
-                <Button className="bg-primary text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 hidden sm:flex">
-                  Get Started
-                </Button>
-              </ContactPopUpForm>
-
+              <Button
+                className="bg-primary text-white px-6 py-2 rounded-full font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 hidden sm:flex"
+                onClick={() => handleNavClick("/contact")}
+              >
+                Contact Us
+              </Button>
               {/* Mobile menu button */}
               <Button
                 variant="ghost"
                 size="icon"
                 className={cn(
-                  "lg:hidden rounded-full transition-all duration-200",
-                  isScrolled
-                    ? "hover:bg-white/10 text-white"
-                    : "hover:bg-gray-100 text-gray-900"
+                  "lg:hidden rounded-full transition-all duration-200 hover:bg-gray-100 text-gray-900"
                 )}
                 onClick={toggleMobileMenu}
               >
@@ -162,7 +147,7 @@ export const HomeNavComp = () => {
               <Button
                 variant="ghost"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
-                onClick={() => handleNavClick("#home")}
+                onClick={() => handleNavClick("/")}
               >
                 Home
               </Button>
@@ -170,7 +155,7 @@ export const HomeNavComp = () => {
               <Button
                 variant="ghost"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
-                onClick={() => handleNavClick("#about")}
+                onClick={() => handleNavClick("/about")}
               >
                 About
               </Button>
@@ -178,7 +163,7 @@ export const HomeNavComp = () => {
               <Button
                 variant="ghost"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
-                onClick={() => handleNavClick("#services")}
+                onClick={() => handleNavClick("/services")}
               >
                 Services
               </Button>
@@ -186,7 +171,7 @@ export const HomeNavComp = () => {
               <Button
                 variant="ghost"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
-                onClick={() => handleNavClick("#projects")}
+                onClick={() => handleNavClick("/projects")}
               >
                 Projects
               </Button>
@@ -194,7 +179,7 @@ export const HomeNavComp = () => {
               <div className="pt-3">
                 <Button
                   className="w-full bg-primary text-white font-medium rounded-full"
-                  onClick={() => handleNavClick("#contact")}
+                  onClick={() => handleNavClick("/contact")}
                 >
                   Get Started
                 </Button>
