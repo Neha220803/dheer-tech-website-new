@@ -218,6 +218,7 @@ p {
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 17px;
+  /* text-align: justify; */
 }
 
 /* Responsive Font Sizes */

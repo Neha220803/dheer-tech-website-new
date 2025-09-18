@@ -5,7 +5,7 @@ import { OurServiceComp } from "@/components/home/our-services";
 import HorizontalScrollProjectComp from "@/components/home/projects";
 import HomeStatsComp from "@/components/home/stats";
 import HomeTestimonialComp from "@/components/home/testimonial";
-import TimelineStickyComp from "@/components/home/timeline/HomeTimelineSticky";
+import HomeTimelineComp2 from "@/components/home/timeline/index2";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <OurServiceComp />
       <HorizontalScrollProjectComp />
       <HomeTestimonialComp />
-      <TimelineStickyComp />
+      <HomeTimelineComp2 />
       <HomeCTAComp />
     </div>
   );
