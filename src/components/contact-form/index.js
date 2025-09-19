@@ -73,7 +73,6 @@ const ContactForm = ({ showTitle = false }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
 
-
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -136,7 +135,7 @@ const ContactForm = ({ showTitle = false }) => {
     <>
       <div className="max-w-md w-full md:p-6 p-4 border bg-white rounded-3xl shadow-sm">
         {showTitle && (
-          <div className=" mb-1 text-center space-y-2">
+          <div className="mb-1 text-center space-y-2">
             <h3 className="text-2xl font-bold text-gray-800">
               Let's Connect to Build Something Great!
             </h3>
@@ -147,10 +146,7 @@ const ContactForm = ({ showTitle = false }) => {
         )}
 
         <Form {...form}>
-          <form
-            onSubmit={form.handleSubmit(onSubmit)}
-            className="md:space-y-1 space-y-1"
-          >
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
             <FormField
               control={form.control}
               name="name"
@@ -183,7 +179,7 @@ const ContactForm = ({ showTitle = false }) => {
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="text-xs" />
                 </FormItem>
               )}
             />
@@ -229,12 +225,13 @@ const ContactForm = ({ showTitle = false }) => {
             />
 
             {/* ✅ Added Captcha */}
-            <div style={{ transform: "scale(0.85  )", transformOrigin: "0 0" }}>
-              <ReCAPTCHA
-                sitekey="6LdKe84rAAAAAHhDOlkgulmt7Ym-uqEYTL84lWT1"
-
-                onChange={(token) => setCaptchaToken(token)}
-              />
+            <div className="w-full flex justify-center">
+              <div className="scale-75 origin-center -mx-4">
+                <ReCAPTCHA
+                  sitekey="6LdKe84rAAAAAHhDOlkgulmt7Ym-uqEYTL84lWT1"
+                  onChange={(token) => setCaptchaToken(token)}
+                />
+              </div>
             </div>
 
             <Button

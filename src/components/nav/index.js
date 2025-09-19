@@ -39,7 +39,7 @@ export const HomeNavComp = () => {
   return (
     <>
       {/* Floating Navigation */}
-      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-6xl px-4">
+      <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-70 w-full max-w-6xl px-4">
         <div
           className={cn(
             "border rounded-3xl md:rounded-full shadow-2xl transition-all duration-300",
