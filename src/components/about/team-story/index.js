@@ -43,7 +43,9 @@ const AboutTeamStoryComp = () => {
     <section className="flex items-center">
       <div className="md:max-w-7xl mx-auto space-y-8 md:py-10 md:px-6">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-3xl font-bold mb-4">Get to Know Us</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Get to Know Us
+          </h2>
           <p className="text-gray-600 md:w-2/3">
             Take a closer look at who we are — a team driven by innovation,
             collaboration, and trust. Explore what we do and why we are

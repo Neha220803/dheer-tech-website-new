@@ -58,9 +58,9 @@ const HomeTestimonialComp = () => {
     <div className="py-16 px-6">
       <div className="max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 bg-blue-50 rounded-2xl py-10 px-6 mx-auto">
         <div>
-          <div className="text-4xl lg:text-6xl font-semibold text-gray-800">
+          <h2 className="text-4xl lg:text-6xl font-semibold text-gray-800">
             Hear From our trusted Clients
-          </div>
+          </h2>
           {/* Navigation Controls */}
           <div className="flex items-center justify-between mt-8">
             <div className="flex space-x-2">

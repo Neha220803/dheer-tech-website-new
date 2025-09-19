@@ -119,7 +119,7 @@ export const HomeTimelineComp2 = () => {
             <div className="md:w-2/3 space-y-6 ">
               <div className="flex justify-center  items-center">
                 <img src="/assets/images/home/champ-cup.svg" alt="" />
-                <div className="text-5xl font-bold"> Our Journey</div>
+                <h2 className="text-5xl font-bold"> Our Journey</h2>
               </div>
 
               <p className=" text-justify">
@@ -154,9 +154,9 @@ export const HomeTimelineComp2 = () => {
             >
               {/* Section Content */}
               <div className="section-content max-w-lg">
-                <div className="text-3xl mb-4 text-gray-800 font-semibold">
+                <h4 className="text-3xl mb-4 text-gray-800 font-semibold">
                   {item.title}
-                </div>
+                </h4>
                 <div>
                   <img src={item.imgPath} alt="" className="w-1/2 h-auto" />
                 </div>

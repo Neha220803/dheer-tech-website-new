@@ -27,9 +27,7 @@ export const OurServiceComp = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <div className="md:text-7xl text-4xl font-medium">
-          Service We Provide
-        </div>
+        <h2 className="md:text-7xl text-4xl font-medium">Service We Provide</h2>
       </motion.div>
 
       <div className="space-y-4 md:max-w-4xl">

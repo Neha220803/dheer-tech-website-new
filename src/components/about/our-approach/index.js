@@ -7,7 +7,7 @@ const AboutOurApproachComp = () => {
     <div className="overflow-hidden bg-neutral-700">
       <section className="section-timeline md:space-y-8 space-y-0 rounded-b-4xl bg-white">
         <div className="flex flex-col gap-4 items-center text-center">
-          <h1 className="text-center">Our Approach</h1>
+          <h2 className="text-5xl text-center">Our Approach</h2>
           <p className="text-gray-600 md:w-3/5">
             We craft intuitive, accessible, and engaging interfaces, ensuring
             effortless experiences across platforms, devices, and audiences

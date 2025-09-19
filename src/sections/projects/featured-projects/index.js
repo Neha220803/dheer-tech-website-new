@@ -88,7 +88,7 @@ const ProjectsFeaturedComp = () => {
   return (
     <section className="flex items-start justify-center">
       <div className="max-w-7xl w-full space-y-16">
-        <h1 className="mb-6">Our Projects</h1>
+        <h2 className="mb-6 text-5xl">Our Projects</h2>
 
         {projectsData.map((project, index) => (
           <div

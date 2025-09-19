@@ -197,15 +197,15 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  /* font-size: 40px; */
   font-optical-sizing: auto;
   font-weight: 700;
 }
 
 h3 {
-  font-size: 28px;
-  font-optical-sizing: auto;
-  font-weight: 600;
+  /* font-size: 28px; */
+  /* font-optical-sizing: auto; */
+  /* font-weight: 600; */
 }
 
 h3 {
@@ -227,13 +227,6 @@ p {
     font-size: 38px;
   }
 
-  h2 {
-    font-size: 34px;
-  }
-
-  h3 {
-    font-size: 26px;
-  }
 
   p {
     font-size: 16px;
@@ -245,13 +238,7 @@ p {
     font-size: 32px;
   }
 
-  h2 {
-    font-size: 28px;
-  }
 
-  h3 {
-    font-size: 24px;
-  }
 
   p {
     font-size: 14px;

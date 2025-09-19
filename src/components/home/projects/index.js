@@ -62,7 +62,7 @@ const HorizontalScrollProjectComp = () => {
   return (
     <div className="carousel bg-neutral-700" ref={targetRef}>
       <div className="projects-header">
-        <div className="projects-title">PROJECTS</div>
+        <h2 className="projects-title">PROJECTS</h2>
         <p className="projects-description">
           We don't just build websites, we craft digital experiences. Every
           pixel tells a story, every interaction sparks joy. Our team blends

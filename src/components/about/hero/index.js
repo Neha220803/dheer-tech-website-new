@@ -31,7 +31,7 @@ const AboutHeroComp = () => {
             </Button>
           </ContactPopUpForm>
         </div>
-        <div className=" flex justify-end">
+        <div className="flex justify-end">
           <img
             src={aboutHeroImg}
             alt="about hero img"

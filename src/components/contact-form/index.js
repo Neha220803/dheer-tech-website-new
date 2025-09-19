@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -72,6 +72,7 @@ const formSchema = z.object({
 const ContactForm = ({ showTitle = false }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaToken, setCaptchaToken] = useState(null);
+  const recaptchaRef = useRef(null);
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -102,7 +103,7 @@ const ContactForm = ({ showTitle = false }) => {
         message: values.message,
         to_name: "DheerTech Icn",
         to_email: "info@dheertech.com",
-        "g-recaptcha-response": captchaToken, // ✅ Captcha token sent too
+        "g-recaptcha-response": captchaToken,
       };
 
       await emailjs.send(
@@ -119,6 +120,9 @@ const ContactForm = ({ showTitle = false }) => {
 
       form.reset();
       setCaptchaToken(null);
+      if (recaptchaRef.current) {
+        recaptchaRef.current.reset();
+      }
     } catch (error) {
       console.error("Error sending email:", error);
 
@@ -228,6 +232,7 @@ const ContactForm = ({ showTitle = false }) => {
             <div className="w-full flex justify-center">
               <div className="scale-75 origin-center -mx-4">
                 <ReCAPTCHA
+                  ref={recaptchaRef}
                   sitekey="6LdKe84rAAAAAHhDOlkgulmt7Ym-uqEYTL84lWT1"
                   onChange={(token) => setCaptchaToken(token)}
                 />

@@ -14,7 +14,9 @@ const FooterComp = () => {
               <div className="text-white">
                 <div className="flex shrink-0 gap-20">
                   <div className="flex flex-col gap-2">
-                    <h3 className="mb-2 uppercase text-[#ffffff80]">Links</h3>
+                    <h3 className="mb-2 uppercase font-bold text-[#ffffff80]">
+                      Links
+                    </h3>
                     <Link
                       href="/"
                       className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
@@ -47,7 +49,7 @@ const FooterComp = () => {
                     </Link>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="mb-2 uppercase text-[#ffffff80]">
+                    <h3 className="mb-2 uppercase font-bold text-[#ffffff80]">
                       Social Media
                     </h3>
                     <p>Facebook</p>

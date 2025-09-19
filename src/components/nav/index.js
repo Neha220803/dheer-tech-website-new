@@ -163,7 +163,7 @@ export const HomeNavComp = () => {
               <Button
                 variant="ghost"
                 className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 "
-                onClick={() => handleNavClick("/services")}
+                onClick={() => handleNavClick("/our-services")}
               >
                 Services
               </Button>

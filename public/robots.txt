@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dheertech.com/sitemap.xml
+
+# Block admin areas (if any in future)
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important assets
+Allow: /assets/
+Allow: /_next/static/
