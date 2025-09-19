@@ -137,3 +137,67 @@
         transform: rotate(2deg) scale(0.98);
     }
 }
+
+/* Target only Mobile-L (400px – 440px, like iPhone XR/12) */
+@media (max-width: 440px) and (min-width: 400px) {
+    .featured-project-images-container3 {
+        right: 30px !important;
+        transform: rotate(2deg) scale(0.98);
+    }
+
+    .featured-project-images-container {
+        left: 15px !important;
+        transform: rotate(-2deg) scale(0.98);
+    }
+
+    .featured-project-images-container2 {
+        left: 90px !important;
+    }
+
+    /* Hover effects */
+    .featured-projects-wrapper:hover .featured-project-images-container {
+        left: 5px;
+        transform: rotate(-3deg) scale(0.95);
+    }
+
+    .featured-projects-wrapper:hover .featured-project-images-container2 {
+        transform: scale(0.95);
+    }
+
+    .featured-projects-wrapper:hover .featured-project-images-container3 {
+        right: 20px;
+        transform: rotate(3deg) scale(0.95);
+    }
+}
+
+/* Target only Mobile-M (360px – 399px, like iPhone 12 Mini/SE) */
+@media (max-width: 399px) and (min-width: 360px) {
+    .featured-project-images-container3 {
+        right: 15px !important;
+        transform: rotate(2deg) scale(0.96);
+    }
+
+    .featured-project-images-container {
+        left: 10px !important;
+        transform: rotate(-2deg) scale(0.96);
+    }
+
+    .featured-project-images-container2 {
+        left: 60px !important;
+    }
+
+    /* Hover effects */
+    .featured-projects-wrapper:hover .featured-project-images-container {
+        left: 0;
+        transform: rotate(-3deg) scale(0.94);
+    }
+
+    .featured-projects-wrapper:hover .featured-project-images-container2 {
+        transform: scale(0.94);
+    }
+
+    .featured-projects-wrapper:hover .featured-project-images-container3 {
+        right: 10px;
+        transform: rotate(3deg) scale(0.94);
+    }
+}
