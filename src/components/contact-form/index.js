@@ -18,6 +18,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2 } from "lucide-react";
+import ReCAPTCHA from "react-google-recaptcha"; // ✅ Added
 
 // Enhanced form schema with robust validation
 const formSchema = z.object({
@@ -29,7 +30,7 @@ const formSchema = z.object({
       message:
         "Name can only contain letters, spaces, hyphens, and apostrophes.",
     })
-    .transform((value) => value.trim().replace(/\s+/g, " ")), // Sanitize multiple spaces
+    .transform((value) => value.trim().replace(/\s+/g, " ")),
 
   email: z
     .string()
@@ -47,15 +48,15 @@ const formSchema = z.object({
     .or(z.literal(""))
     .refine(
       (value) => {
-        if (!value || value === "") return true; // Optional field
-        const cleanPhone = value.replace(/\D/g, ""); // Remove non-digits
+        if (!value || value === "") return true;
+        const cleanPhone = value.replace(/\D/g, "");
         return cleanPhone.length === 10;
       },
       { message: "Phone number must be exactly 10 digits." }
     )
     .transform((value) => {
       if (!value) return "";
-      return value.replace(/\D/g, ""); // Keep only digits
+      return value.replace(/\D/g, "");
     }),
 
   message: z
@@ -65,11 +66,13 @@ const formSchema = z.object({
     .regex(/^[a-zA-Z0-9\s\-_.,!?@#$%&*()+=\[\]{}|\\:";'<>\/`~]+$/, {
       message: "Message contains invalid characters.",
     })
-    .transform((value) => value.trim().replace(/\s+/g, " ")), // Sanitize
+    .transform((value) => value.trim().replace(/\s+/g, " ")),
 });
 
 const ContactForm = ({ showTitle = false }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null);
+
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -82,39 +85,44 @@ const ContactForm = ({ showTitle = false }) => {
   });
 
   async function onSubmit(values) {
+    if (!captchaToken) {
+      toast.error("Please verify the captcha before submitting.", {
+        duration: 3000,
+        position: "top-center",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      // Prepare EmailJS template parameters
       const templateParams = {
         from_name: values.name,
         from_email: values.email,
         phone_number: values.phone || "Not provided",
         message: values.message,
-        to_name: "DheerTech Icn", // Change this to your company name
-        to_email: "info@dheertech.com", // Your recipient email
+        to_name: "DheerTech Icn",
+        to_email: "info@dheertech.com",
+        "g-recaptcha-response": captchaToken, // ✅ Captcha token sent too
       };
 
-      // Send email using EmailJS
       await emailjs.send(
-        "service_3idlt0x", // Replace with your service ID
-        "template_7g91i4l", // Replace with your template ID
+        "service_3idlt0x",
+        "template_7g91i4l",
         templateParams,
-        "bql19IHSmzPWHoJiX" // Replace with your public key
+        "bql19IHSmzPWHoJiX"
       );
 
-      // Success notification
       toast.success("Message sent successfully! We'll get back to you soon.", {
         duration: 3000,
         position: "top-center",
       });
 
-      // Reset form
       form.reset();
+      setCaptchaToken(null);
     } catch (error) {
       console.error("Error sending email:", error);
 
-      // Error notification
       toast.error("Failed to send message. Please try again later.", {
         duration: 3000,
         position: "top-center",
@@ -128,7 +136,7 @@ const ContactForm = ({ showTitle = false }) => {
     <>
       <div className="max-w-md w-full md:p-6 p-4 border bg-white rounded-3xl shadow-sm">
         {showTitle && (
-          <div className=" mb-4 text-center space-y-2">
+          <div className=" mb-1 text-center space-y-2">
             <h3 className="text-2xl font-bold text-gray-800">
               Let's Connect to Build Something Great!
             </h3>
@@ -141,7 +149,7 @@ const ContactForm = ({ showTitle = false }) => {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="md:space-y-6 space-y-4"
+            className="md:space-y-1 space-y-1"
           >
             <FormField
               control={form.control}
@@ -190,7 +198,7 @@ const ContactForm = ({ showTitle = false }) => {
                     <Input
                       type="tel"
                       placeholder="1234567890"
-                      maxLength={14} // Allow for formatting like (123) 456-7890
+                      maxLength={14}
                       disabled={isSubmitting}
                       {...field}
                     />
@@ -220,7 +228,20 @@ const ContactForm = ({ showTitle = false }) => {
               )}
             />
 
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            {/* ✅ Added Captcha */}
+            <div style={{ transform: "scale(0.85  )", transformOrigin: "0 0" }}>
+              <ReCAPTCHA
+                sitekey="6LdKe84rAAAAAHhDOlkgulmt7Ym-uqEYTL84lWT1"
+
+                onChange={(token) => setCaptchaToken(token)}
+              />
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full"
+              disabled={isSubmitting || !captchaToken}
+            >
               {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
