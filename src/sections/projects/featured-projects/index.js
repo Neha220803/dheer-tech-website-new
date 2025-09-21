@@ -67,9 +67,9 @@ const projectsData = [
     title: "Hicksville Driving School",
     industry: "Education & Training",
     images: [
+      "/assets/images/projects/hds-2.png",
       "/assets/images/projects/hds-1.png",
-      "/assets/images/projects/hds-1.png",
-      "/assets/images/projects/hds-1.png",
+      "/assets/images/projects/hds-3.png",
     ],
     tags: ["Student Portal", "Live Tracking", "Document Management"],
     tagColors: [
@@ -93,13 +93,15 @@ const ProjectsFeaturedComp = () => {
         {projectsData.map((project, index) => (
           <div
             key={project.id}
-            className={`grid md:grid-cols-2 grid-cols-1 ${index % 2 === 1 ? "md:grid-flow-col-dense" : ""
-              }`}
+            className={`grid md:grid-cols-2 grid-cols-1 ${
+              index % 2 === 1 ? "md:grid-flow-col-dense" : ""
+            }`}
           >
             {/* Images Section */}
             <div
-              className={`featured-projects-wrapper ${index % 2 === 1 ? "md:col-start-2" : ""
-                }`}
+              className={`featured-projects-wrapper ${
+                index % 2 === 1 ? "md:col-start-2" : ""
+              }`}
             >
               <div className="featured-project-images-container absolute top-5 left-0 z-50">
                 <img
@@ -126,10 +128,11 @@ const ProjectsFeaturedComp = () => {
 
             {/* Content Section */}
             <div
-              className={`flex flex-col justify-center space-y-6 px-6 md:px-0 ${index % 2 === 1
+              className={`flex flex-col justify-center space-y-6 px-6 md:px-0 ${
+                index % 2 === 1
                   ? "md:col-start-1 pr-8 md:pr-16"
                   : "md:pl-16 pl-8"
-                }`}
+              }`}
             >
               <div className="space-y-4">
                 <h2 className="text-3xl font-bold text-gray-900 leading-tight">
@@ -148,9 +151,11 @@ const ProjectsFeaturedComp = () => {
                   {project.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className={`px-3 py-1 ${project.tagColors[tagIndex]?.bg || "bg-gray-100"
-                        } ${project.tagColors[tagIndex]?.text || "text-gray-800"
-                        } text-sm font-medium rounded-full`}
+                      className={`px-3 py-1 ${
+                        project.tagColors[tagIndex]?.bg || "bg-gray-100"
+                      } ${
+                        project.tagColors[tagIndex]?.text || "text-gray-800"
+                      } text-sm font-medium rounded-full`}
                     >
                       {tag}
                     </span>
