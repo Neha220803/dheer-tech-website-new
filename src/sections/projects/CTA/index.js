@@ -2,11 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 
 const ProjectCTAComp = () => {
   return (
     <div className="bg-neutral-700">
-      <section className="py-20 px-6 bg-gradient-to-br rounded-b-4xl bg-white relative overflow-hidden">
+      <div className="py-20 px-6 bg-gradient-to-br rounded-b-4xl bg-white relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-primary-400 to-primary-300 rounded-full blur-3xl"></div>
@@ -14,7 +16,7 @@ const ProjectCTAComp = () => {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-2xl p-8 ">
+          <div className="bg-white/80 border-1 backdrop-blur-sm rounded-3xl shadow-2xl p-8 ">
             <div className="flex items-center justify-center">
               {/* Content Side - Centered */}
               <motion.div
@@ -40,7 +42,7 @@ const ProjectCTAComp = () => {
                   expertise. Join successful businesses who chose excellence.
                 </p>
 
-                {/* Rating section */}
+                {/* Rating div */}
                 <div className="flex items-center justify-center mb-10 space-x-4">
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -67,13 +69,11 @@ const ProjectCTAComp = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:from-primary-600 hover:to-primary-700"
-                  >
-                    Get a Quote
-                  </motion.button>
+                  <ContactPopUpForm>
+                    <Button className="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:from-primary-600 hover:to-primary-700 hover:scale-105">
+                      Get a Quote
+                    </Button>
+                  </ContactPopUpForm>
                 </div>
 
                 {/* Trust indicators */}
@@ -101,7 +101,7 @@ const ProjectCTAComp = () => {
             <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
           </svg>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

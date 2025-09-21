@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Circle, Hexagon, Square, Star, Triangle } from "lucide-react";
 import React from "react";
 
 const ProjectsHeroComp = () => {
   return (
-    <section className="flex flex-col items-center justify-center md:justify-start text-white bg-gradient-to-br from-gray-900 to-blue-100 px-4 md:py-12">
+    <section className="flex flex-col items-center justify-center md:justify-start text-white bg-gradient-to-br from-gray-800 to-blue-100 px-4 md:py-12">
       <BackgroundElements />
       <div className="flex justify-center items-center flex-col text-center space-y-4 md:pt-25">
         {/* Heading */}
@@ -37,7 +36,7 @@ const BackgroundElements = () => {
   return (
     <div className="bg-primary">
       <div
-        className="absolute top-[25%] md:bottom-70 right-[10%] w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40"
+        className="absolute top-[25%] md:bottom-70 right-[10%] w-25 h-25 lg:w-30 lg:h-30"
         style={{
           backgroundImage: 'url("/assets/icons/projects/handshake.png")',
           backgroundSize: "contain",
@@ -46,16 +45,16 @@ const BackgroundElements = () => {
       />
 
       <div
-        className="absolute top-[10%] md:top-[35%] left-[15%] w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 lg:w-40 lg:h-40"
+        className="absolute top-[13%] md:top-[35%] left-[15%] w-20 h-20 lg:w-30 lg:h-30"
         style={{
-          backgroundImage: 'url("/assets/icons/projects/bolt.png")',
+          backgroundImage: 'url("/assets/icons/projects/bolt-gold.png")',
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
         }}
       />
 
       <div
-        className="absolute bottom-[10%] right-[8%] md:right-[25%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30"
+        className="absolute bottom-[10%] right-[8%] md:right-[25%] w-20 h-20 lg:w-30 lg:h-30"
         style={{
           backgroundImage: 'url("/assets/icons/projects/secure-lock.png")',
           backgroundSize: "contain",
@@ -64,7 +63,7 @@ const BackgroundElements = () => {
       />
 
       <div
-        className="absolute bottom-[10%] left-[8%] md:left-[25%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30"
+        className="absolute bottom-[10%] left-[8%] md:left-[25%] w-20 h-20 lg:w-30 lg:h-30"
         style={{
           backgroundImage: 'url("/assets/icons/projects/charts.png")',
           backgroundSize: "contain",
@@ -73,7 +72,7 @@ const BackgroundElements = () => {
       />
 
       <div
-        className="absolute bottom-[20%] left-[40%] md:left-[47%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30  md:bottom-[2%] "
+        className="absolute bottom-[18%] left-[40%] md:left-[47%] w-20 h-20 lg:w-30 lg:h-30"
         style={{
           backgroundImage: 'url("/assets/icons/projects/bulb.png")',
           backgroundSize: "contain",

@@ -52,10 +52,18 @@ const FooterComp = () => {
                     <h3 className="mb-2 uppercase font-bold text-[#ffffff80]">
                       Social Media
                     </h3>
-                    <p>Facebook</p>
-                    <p>Linkedin</p>
-                    <p>YouTube</p>
-                    <p>Instagram</p>
+                    <Link
+                      href="https://www.facebook.com/people/%F0%9D%94%BB%F0%9D%95%99%F0%9D%95%96%F0%9D%95%96%F0%9D%95%A3%F0%9D%95%8B%F0%9D%95%96%F0%9D%95%94%F0%9D%95%99/100076671710251/"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Facebook
+                    </Link>
+                    <Link
+                      href="https://www.instagram.com/dheertech_inc/"
+                      className="hover:text-blue-300 transition-colors duration-300 cursor-pointer"
+                    >
+                      Instagram
+                    </Link>
                   </div>
                 </div>
               </div>
