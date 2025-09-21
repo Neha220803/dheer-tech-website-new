@@ -1,4 +1,6 @@
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import React from "react";
 
 const ProjectsHeroComp = () => {
@@ -20,10 +22,14 @@ const ProjectsHeroComp = () => {
 
         {/* Buttons */}
         <div className="flex gap-3 sm:gap-4 justify-center items-center">
-          <Button className="w-full sm:w-auto">Get Started</Button>
-          <Button variant="secondary" className="w-full sm:w-auto">
-            Learn More
-          </Button>
+          <ContactPopUpForm>
+            <Button className="w-full sm:w-auto">Get Started</Button>
+          </ContactPopUpForm>
+          <Link href="/our-services" className="w-full sm:w-auto">
+            <Button variant="secondary" className="px-4">
+              Learn More
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
