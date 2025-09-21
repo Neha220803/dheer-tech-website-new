@@ -4,7 +4,7 @@ import React from "react";
 
 const ProjectsHeroComp = () => {
   return (
-    <section className="flex flex-col items-center justify-center md:justify-start text-white bg-gradient-to-br from-gray-900 to-blue-200 px-4 md:py-12">
+    <section className="flex flex-col items-center justify-center md:justify-start text-white bg-gradient-to-br from-gray-900 to-blue-100 px-4 md:py-12">
       <BackgroundElements />
       <div className="flex justify-center items-center flex-col text-center space-y-4 md:pt-25">
         {/* Heading */}

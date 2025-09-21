@@ -2,6 +2,34 @@
 
 import React, { useEffect, useRef } from "react";
 import "./styles.css";
+import { motion } from "framer-motion";
+import { titleVariants, paragraphVariants } from "../../animation/anim.js";
+
+export const timelineContentVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.3,
+    },
+  },
+};
+
+export const timelineImageVariants = {
+  hidden: { scale: 0.8, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeOut",
+      delay: 0.1,
+    },
+  },
+};
 
 export const HomeTimelineComp2 = () => {
   const timelineContainerRef = useRef(null);
@@ -117,17 +145,35 @@ export const HomeTimelineComp2 = () => {
         <div className="md:col-span-1 col-span-2 md:h-screen md:sticky md:top-0 flex justify-center md:ml-10 items-center text-gray-800">
           <div className="mx-2 mb-2 flex justify-center rounded-4xl sticky-content">
             <div className="md:w-2/3 space-y-6 ">
-              <div className="flex justify-center  items-center">
-                <img src="/assets/images/home/champ-cup.svg" alt="" />
-                <h2 className="text-5xl font-bold"> Our Journey</h2>
+              <div className="flex justify-around items-center">
+                <img
+                  src="/assets/images/home/champ-cup.svg"
+                  className="h-25 w-auto"
+                  alt=""
+                />
+                <motion.h2
+                  className="text-5xl font-bold text-center"
+                  variants={titleVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-100px" }}
+                >
+                  Our Journey
+                </motion.h2>
               </div>
 
-              <p className=" text-justify">
+              <motion.p
+                className="text-justify"
+                variants={paragraphVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+              >
                 From initial discovery to ongoing support, we guide you through
                 every stage of building and growing your digital presence. Our
                 process is designed to deliver impactful websites that drive
                 results and evolve with your business.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
@@ -154,15 +200,33 @@ export const HomeTimelineComp2 = () => {
             >
               {/* Section Content */}
               <div className="section-content max-w-lg">
-                <h4 className="text-3xl mb-4 text-gray-800 font-semibold">
+                <motion.h4
+                  className="text-3xl mb-4 text-gray-800 font-semibold"
+                  variants={titleVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
                   {item.title}
-                </h4>
-                <div>
+                </motion.h4>
+                <motion.div
+                  variants={timelineImageVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
                   <img src={item.imgPath} alt="" className="w-1/2 h-auto" />
-                </div>
-                <div className="md:text-lg text-gray-600 md:leading-relaxed text-justify">
+                </motion.div>
+
+                <motion.div
+                  className="md:text-lg text-gray-600 md:leading-relaxed text-justify"
+                  variants={timelineContentVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-50px" }}
+                >
                   {item.content}
-                </div>
+                </motion.div>
               </div>
             </div>
           ))}

@@ -103,7 +103,7 @@ export const OurServiceComp = () => {
 
           {/* Center Card - comes from bottom */}
           <motion.div
-            variants={bottomCardVariants}
+            variants={rightCardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}

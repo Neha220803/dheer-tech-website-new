@@ -8,8 +8,8 @@ const projectsData = [
     title: "Adhi Constructions",
     industry: "Construction Industry",
     images: [
-      "/assets/images/projects/aadhi-1.png",
       "/assets/images/projects/aadhi-2.png",
+      "/assets/images/projects/aadhi-1.png",
       "/assets/images/projects/aadhi-3.png",
     ],
     tags: ["Web Design", "Web Development"],
@@ -27,8 +27,8 @@ const projectsData = [
     title: "Crown of Spices",
     industry: "Restaurant & Bar",
     images: [
-      "/assets/images/projects/crown-3.png",
       "/assets/images/projects/crown-2.png",
+      "/assets/images/projects/crown-1.png",
       "/assets/images/projects/crown-3.png",
     ],
     tags: ["Online Ordering", "POS Integration", "Table Booking"],
@@ -129,7 +129,9 @@ const ProjectsFeaturedComp = () => {
             {/* Content Section */}
             <div
               className={`flex flex-col justify-center space-y-6 ${
-                index % 2 === 1 ? "md:col-start-1 md:pr-8" : "pl-8"
+                index % 2 === 1
+                  ? "md:col-start-1 pr-8 md:pr-16"
+                  : "md:pl-16 pl-8"
               }`}
             >
               <div className="space-y-4">

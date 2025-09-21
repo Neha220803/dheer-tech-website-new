@@ -52,3 +52,16 @@ export const bottomCardVariants = {
     },
   },
 };
+
+export const paragraphVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: 0.2, // Delay after the title animation
+    },
+  },
+};

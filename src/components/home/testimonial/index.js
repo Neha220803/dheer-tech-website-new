@@ -4,6 +4,10 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  leftCardVariants,
+  rightCardVariants,
+} from "@/components/animation/anim";
 
 const HomeTestimonialComp = () => {
   const testimonials = [
@@ -57,7 +61,12 @@ const HomeTestimonialComp = () => {
   return (
     <div className="py-16 px-6">
       <div className="max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-8 bg-blue-50 rounded-2xl py-10 px-6 mx-auto">
-        <div>
+        <motion.div
+          variants={leftCardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <h2 className="text-4xl lg:text-6xl font-semibold text-gray-800">
             Hear From our trusted Clients
           </h2>
@@ -82,9 +91,15 @@ const HomeTestimonialComp = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="relative min-h-[250px] flex flex-col justify-between">
+        <motion.div
+          className="relative min-h-[250px] flex flex-col justify-between"
+          variants={rightCardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -102,7 +117,7 @@ const HomeTestimonialComp = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

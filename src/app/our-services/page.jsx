@@ -66,7 +66,7 @@ const ServicesPage = () => {
     <div className="bg-neutral-700">
       <section className="flex items-center rounded-b-4xl bg-white">
         <div className="md:max-w-7xl h-full bg-secondar py-10 md:px-6 mx-auto w-full space-y-2 ">
-          <div className="text-center flex flex-col justify-center items-center mb-4">
+          <div className="text-center flex flex-col justify-center items-center mb-6">
             <h1>Our Services</h1>
             <p className="md:w-4/5">
               At DheerTech, we build smart, scalable, and secure digital

@@ -5,6 +5,7 @@ import "./styles.css";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { titleVariants } from "../../animation/anim.js";
 
 // Projects data array
 const projects = [
@@ -62,8 +63,22 @@ const HorizontalScrollProjectComp = () => {
   return (
     <div className="carousel bg-neutral-700" ref={targetRef}>
       <div className="projects-header">
-        <h2 className="projects-title">PROJECTS</h2>
-        <p className="projects-description">
+        <motion.h2
+          className="projects-title"
+          variants={titleVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-200px" }}
+        >
+          PROJECTS
+        </motion.h2>
+        <motion.p
+          className="projects-description"
+          variants={titleVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-200px" }}
+        >
           We don't just build websites, we craft digital experiences. Every
           pixel tells a story, every interaction sparks joy. Our team blends
           cutting-edge technology with human-centered design to create solutions
@@ -72,7 +87,7 @@ const HorizontalScrollProjectComp = () => {
           <span className="projects-description-highlight">
             Plus, we're pretty fun to work with.
           </span>
-        </p>
+        </motion.p>
       </div>
       <div className="contentContainer">
         <motion.div className="images" style={{ x }}>
