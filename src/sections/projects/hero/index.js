@@ -73,7 +73,7 @@ const BackgroundElements = () => {
       />
 
       <div
-        className="absolute bottom-[20%] left-[40%] md:left-[47%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30"
+        className="absolute bottom-[20%] left-[40%] md:left-[47%] w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-30 lg:h-30  md:bottom-[2%] "
         style={{
           backgroundImage: 'url("/assets/icons/projects/bulb.png")',
           backgroundSize: "contain",
