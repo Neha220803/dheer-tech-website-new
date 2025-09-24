@@ -110,6 +110,26 @@ const HorizontalScrollProjectComp = () => {
           ))}
         </motion.div>
       </div>
+      {/* Add this after your existing contentContainer div */}
+      <div className="mobile-projects-container">
+        {projects.map((project) => (
+          <div key={project.id} className="mobile-project-item">
+            <div className="mobile-image-container">
+              <img
+                className="project-image"
+                src={project.image}
+                alt={project.alt}
+              />
+            </div>
+            <Link href={project.link}>
+              <div className="flex items-baseline justify-start gap-2 md:gap-3">
+                <p className="project-name-text">{project.name}</p>
+                <ExternalLink className="project-name-icon" />
+              </div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
