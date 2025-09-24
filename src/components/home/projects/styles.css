@@ -147,3 +147,63 @@
         height: 24px;
     }
 }
+
+/* Add these new rules to your existing styles.css */
+
+/* Mobile projects container - hidden on desktop */
+.mobile-projects-container {
+    display: none;
+    padding: 2rem;
+    background: #404040;
+}
+
+.mobile-project-item {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-image-container {
+    height: 25rem;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+/* Mobile responsive rules */
+@media (max-width: 1023px) {
+    .carousel {
+        height: auto !important;
+        /* Remove fixed height on mobile */
+    }
+
+    .contentContainer {
+        display: none;
+        /* Hide desktop horizontal scroll */
+    }
+
+    .mobile-projects-container {
+        display: block;
+        /* Show mobile vertical layout */
+    }
+
+    .mobile-image-container {
+        height: 20rem;
+        /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-projects-container {
+        padding: 1rem;
+    }
+
+    .mobile-image-container {
+        height: 15rem;
+    }
+
+    .mobile-project-item {
+        margin-bottom: 2rem;
+    }
+}
