@@ -25,10 +25,10 @@ const ReusableWhyComponent = ({
   ],
   showHighlight = true,
   showBadge = true,
-  badgeText = "Empowering Global Careers",
+  badgeText = "Empowering Business",
 }) => {
   return (
-    <div className="bg-neutral-700 text-white py-12 px-4">
+    <div className="bg-neutral-700 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {showBadge && (
           <div className="mb-6">

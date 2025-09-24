@@ -10,7 +10,7 @@ export const ourServicesData = {
       searchBartext: "custom-web-app.dev",
     },
     timeline: {
-      title: "Development Process",
+      title: "Our Development Process",
       subtitle:
         "Our systematic approach ensures your custom web application meets business objectives while maintaining high performance and security standards.",
       steps: [
@@ -27,7 +27,7 @@ export const ourServicesData = {
         {
           title: "Development & Testing",
           description:
-            "Building robust applications using modern frameworks with rigorous testing to ensure functionality, performance, and security.",
+            "Building robust apps using modern frameworks with rigorous testing to ensure functionality, security and performance.",
         },
         {
           title: "Deployment & Support",
@@ -48,7 +48,7 @@ export const ourServicesData = {
       searchBartext: "business-design.studio",
     },
     timeline: {
-      title: "Design Process",
+      title: "Our Design Process",
       subtitle:
         "From concept to completion, we follow a structured design process that ensures your brand materials effectively communicate your message and values.",
       steps: [
@@ -86,7 +86,7 @@ export const ourServicesData = {
       searchBartext: "digital-marketing.pro",
     },
     timeline: {
-      title: "Marketing Strategy",
+      title: "Our Marketing Strategy",
       subtitle:
         "Our data-driven approach combines multiple digital channels to maximize your online presence and deliver measurable results for sustainable growth.",
       steps: [
@@ -124,7 +124,7 @@ export const ourServicesData = {
       searchBartext: "software-dev.tech",
     },
     timeline: {
-      title: "Development Lifecycle",
+      title: "Our Development Lifecycle",
       subtitle:
         "Following industry best practices and agile methodologies to deliver high-quality software solutions that meet your specific business requirements and objectives.",
       steps: [
@@ -156,35 +156,35 @@ export const ourServicesData = {
       title1: "Cyber Security",
       title2: "Protection",
       description:
-        "Comprehensive cybersecurity solutions featuring secure coding practices, advanced encryption, compliance frameworks, and threat protection. Safeguard your digital assets and ensure business continuity with enterprise-grade security.",
-      item1: "Threat Protection",
-      item2: "Compliance Ready",
+        "Comprehensive cybersecurity solutions built on secure development practices, OWASP Top 10 prevention, advanced encryption, and secure schema implementation. Protect your digital assets with enterprise-grade security from the ground up.",
+      item1: "Secure by Design",
+      item2: "OWASP Compliant",
       searchBartext: "cybersecurity.shield",
     },
     timeline: {
-      title: "Security Implementation",
+      title: "Our Security Implementation",
       subtitle:
-        "Multi-layered security approach combining proactive threat detection, vulnerability assessment, and incident response to protect your business from cyber threats.",
+        "Security-first development approach integrating secure coding practices, OWASP Top 10 prevention, and robust schema protection to build inherently secure applications.",
       steps: [
         {
-          title: "Security Assessment",
+          title: "Secure Schema Design",
           description:
-            "Comprehensive security audit to identify vulnerabilities, assess current protection levels, and develop targeted security strategies.",
+            "Implementing secure database schemas with proper data validation, input sanitization, and SQL injection prevention following security best practices and OWASP guidelines.",
         },
         {
-          title: "Protection Implementation",
+          title: "OWASP Top 10 Prevention",
           description:
-            "Deploying advanced security measures including encryption, access controls, monitoring systems, and secure coding practices.",
+            "Building applications with comprehensive protection against the OWASP Top 10 vulnerabilities including injection attacks, broken authentication, security misconfigurations, and more.",
         },
         {
-          title: "Monitoring & Detection",
+          title: "Secure Development Practices",
           description:
-            "24/7 security monitoring with real-time threat detection, incident response, and automated security protocols.",
+            "Implementing secure coding standards, encryption protocols, access controls, and security testing throughout the development lifecycle to ensure robust protection.",
         },
         {
-          title: "Compliance & Updates",
+          title: "Continuous Security Integration",
           description:
-            "Ensuring regulatory compliance and maintaining security through regular updates, patches, and security protocol enhancements.",
+            "Maintaining security through automated security scanning, regular dependency updates, security patch management, and ongoing vulnerability prevention measures.",
         },
       ],
     },
@@ -194,35 +194,35 @@ export const ourServicesData = {
       title1: "E-Commerce",
       title2: "Platforms",
       description:
-        "High-performance e-commerce solutions designed to boost sales and enhance customer experiences. From secure payment processing to inventory management, we build platforms that drive online success and business growth.",
-      item1: "Sales Optimization",
-      item2: "Customer Experience",
+        "Comprehensive e-commerce solutions with integrated payment gateway systems, powerful admin panel management, and built-in CMS functionality. From secure transactions to content management, we build platforms that drive online success and streamline business operations.",
+      item1: "Payment Integration",
+      item2: "Admin & CMS Ready",
       searchBartext: "ecommerce.store",
     },
     timeline: {
-      title: "E-Commerce Development",
+      title: "Our E-Commerce Development",
       subtitle:
-        "End-to-end e-commerce development from store setup to launch, including payment integration, inventory management, and conversion optimization features.",
+        "Complete e-commerce ecosystem development featuring payment gateway integration, comprehensive admin panel controls, and CMS capabilities for seamless store management.",
       steps: [
         {
-          title: "Store Planning",
+          title: "Platform Architecture",
           description:
-            "E-commerce strategy development including platform selection, feature requirements, and user experience planning for optimal conversions.",
+            "E-commerce foundation development with secure payment gateway integration, database design, and scalable architecture planning for optimal performance and growth.",
         },
         {
-          title: "Platform Development",
+          title: "Admin Panel Development",
           description:
-            "Building custom e-commerce solutions with secure payment gateways, inventory management, and mobile-responsive design.",
+            "Building comprehensive admin dashboard with inventory management, order processing, customer management, sales analytics, and product catalog controls.",
         },
         {
-          title: "Integration & Testing",
+          title: "CMS & Content Management",
           description:
-            "Integrating third-party services, payment processors, and shipping solutions with comprehensive testing for seamless operations.",
+            "Implementing content management system for product descriptions, blog posts, promotional content, SEO management, and dynamic page creation capabilities.",
         },
         {
-          title: "Launch & Optimization",
+          title: "Integration & Launch",
           description:
-            "Store launch with ongoing performance monitoring, conversion rate optimization, and feature enhancements for sustained growth.",
+            "Payment gateway configuration, shipping integration, testing procedures, and platform launch with ongoing support and feature enhancements.",
         },
       ],
     },

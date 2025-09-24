@@ -31,8 +31,8 @@ const ReusableTimelineComp = ({
   ],
   primaryColor = "bg-emerald-500",
   borderColor = "border-gray-300",
-  textPrimaryColor = "text-gray-900",
-  textSecondaryColor = "text-gray-600",
+  textPrimaryColor = "text-gray-700",
+  textSecondaryColor = "text-gray-500",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedSteps, setAnimatedSteps] = useState(new Set());
@@ -77,12 +77,14 @@ const ReusableTimelineComp = ({
         style={{ "--step-count": steps.length }}
       >
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 w-full flex flex-col items-center justify-center">
           <h2 className={cn("text-4xl font-bold mb-4", textPrimaryColor)}>
             {title}
           </h2>
           {subtitle && (
-            <p className={cn("text-lg ", textSecondaryColor)}>{subtitle}</p>
+            <p className={cn("text-lg w-2/3", textSecondaryColor)}>
+              {subtitle}
+            </p>
           )}
         </div>
 
@@ -143,10 +145,10 @@ const ReusableTimelineComp = ({
                   </div>
                 </div>
 
-                <div className="max-w-48">
+                <div className="">
                   <h3
                     className={cn(
-                      "text-base mb-2 whitespace-nowrap transition-all duration-500",
+                      "text-base mb-2 whitespace-nowrap text-gray-700 transition-all duration-500",
                       animatedSteps.has(index)
                         ? `font-semibold ${textPrimaryColor}`
                         : `font-normal ${textSecondaryColor}`
@@ -154,14 +156,14 @@ const ReusableTimelineComp = ({
                   >
                     {step.title}
                   </h3>
-                  <p
+                  <div
                     className={cn(
-                      "text-sm leading-relaxed",
+                      "text-md leading-relaxed",
                       textSecondaryColor
                     )}
                   >
                     {step.description}
-                  </p>
+                  </div>
                 </div>
               </div>
             ))}

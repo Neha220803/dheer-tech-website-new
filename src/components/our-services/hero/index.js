@@ -1,15 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {
-  Code2,
-  Zap,
-  Users,
-  TrendingUp,
-  Play,
-  Globe,
-  Rocket,
-} from "lucide-react";
+import { Code2, Zap, Users, TrendingUp, Globe, Rocket } from "lucide-react";
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 
 const LightNeonHero = ({
   title1 = "Custom",
@@ -110,7 +103,7 @@ const LightNeonHero = ({
               What is it?
             </div>
 
-            <h1 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
+            <h1 className="text-6xl font-bold mb-4 md:mb-8 leading-tight">
               <span className="text-gray-900">{title1}</span>
               <br />
               <span
@@ -120,7 +113,7 @@ const LightNeonHero = ({
               </span>
             </h1>
 
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-700 mb-4 md:mb-8 leading-relaxed">
               {description}
             </p>
 
@@ -144,18 +137,20 @@ const LightNeonHero = ({
             </div>
 
             <div>
-              <button
-                className={`group relative bg-gradient-to-r ${t.gradientFrom} ${t.gradientTo} text-white px-8 py-4 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-2xl ${t.glowColor} transform hover:scale-105`}
-              >
-                <span className="relative z-10">Learn More</span>
-                <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              </button>
+              <ContactPopUpForm>
+                <button
+                  className={`cursor-pointer group relative bg-gradient-to-r ${t.gradientFrom} ${t.gradientTo} text-white md:px-8 px-5 md:py-4 py-3 rounded-xl font-semibold overflow-hidden transition-all duration-300 hover:shadow-2xl ${t.glowColor} transform hover:scale-105`}
+                >
+                  <span className="relative z-10">Learn More</span>
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </button>
+              </ContactPopUpForm>
             </div>
           </div>
 
           {/* Right Card */}
           <div
-            className={`relative transform transition-all duration-1000 delay-300 ${
+            className={`px-3 md:p-0 relative transform transition-all duration-1000 delay-300 ${
               isVisible
                 ? "translate-x-0 opacity-100"
                 : "translate-x-full opacity-0"

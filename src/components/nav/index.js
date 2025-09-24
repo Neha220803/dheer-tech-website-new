@@ -4,14 +4,68 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+
+const components = [
+  {
+    title: "View All Our Services",
+    href: "/our-services",
+    description:
+      "Explore our complete range of professional services and tailored business solutions.",
+  },
+  {
+    title: "Custom Web Applications",
+    href: "/our-services/custom-web-app",
+    description:
+      "Tailored web solutions built to meet your specific business requirements and user needs.",
+  },
+  {
+    title: "Cyber Security Protection",
+    href: "/our-services/cyber-security-protection",
+    description:
+      "Comprehensive security measures to protect your digital assets from threats and vulnerabilities.",
+  },
+  {
+    title: "Business Essentials Designing",
+    href: "/our-services/business-essentials-designing",
+    description:
+      "Professional branding and design services including logos, marketing materials, and visual identity.",
+  },
+  {
+    title: "Digital Marketing",
+    href: "/our-services/digital-marketing",
+    description:
+      "Strategic online marketing campaigns to boost your brand visibility and drive growth.",
+  },
+  {
+    title: "Software Development",
+    href: "/our-services/software-development",
+    description:
+      "Custom software solutions designed to streamline operations and enhance business efficiency.",
+  },
+  {
+    title: "E-Commerce Platforms",
+    href: "/our-services/e-commerce-platforms",
+    description:
+      "Complete online store solutions with secure payment processing and inventory management.",
+  },
+  {
+    title: "AI & Automation Tools",
+    href: "/our-services/ai-automation-tools",
+    description:
+      "Intelligent automation systems to optimize workflows and reduce manual operational tasks.",
+  },
+];
 
 export const HomeNavComp = () => {
   const router = useRouter();
@@ -30,6 +84,7 @@ export const HomeNavComp = () => {
   const handleNavClick = (href) => {
     router.push(href);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -87,12 +142,25 @@ export const HomeNavComp = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900"
+                  <NavigationMenuTrigger
+                    className="group inline-flex h-10 w-max items-center justify-center rounded-full px-4 py-2 text-sm font-medium transition-colors text-gray-900 hover:bg-gray-100 hover:text-gray-900 cursor-pointer"
                     onClick={() => handleNavClick("/our-services")}
                   >
                     Services
-                  </NavigationMenuLink>
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className=" !rounded-3xl">
+                    <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                      {components.map((component) => (
+                        <ListItem
+                          key={component.title}
+                          title={component.title}
+                          href={component.href}
+                        >
+                          {component.description}
+                        </ListItem>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -191,3 +259,18 @@ export const HomeNavComp = () => {
     </>
   );
 };
+
+function ListItem({ title, children, href, ...props }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild className={"rounded-lg p-4"}>
+        <Link href={href}>
+          <div className="text-md leading-none font-medium">{title}</div>
+          <div className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+            {children}
+          </div>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+}

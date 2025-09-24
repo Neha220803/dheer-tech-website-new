@@ -19,7 +19,7 @@ const ContactPopUpForm = ({ children, triggerClassName = "" }) => {
       <DialogTrigger asChild className={triggerClassName}>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] max-h-[90vh] rounded-3xl overflow-hidden">
+      <DialogContent className="sm:max-w-[500px] max-h-[90vh] rounded-3xl overflow-hidden z-100">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center">
             Get in Touch

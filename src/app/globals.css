@@ -265,7 +265,7 @@ p {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   h2 {
@@ -283,4 +283,9 @@ p {
   section {
     padding: 2.2rem 1.2rem;
   }
+}
+
+[data-slot="navigation-menu-viewport"] {
+  border-radius: 1.5rem !important;
+  top: 10px;
 }

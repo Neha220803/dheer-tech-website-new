@@ -12,6 +12,7 @@ import {
   Zap,
   Globe,
 } from "lucide-react";
+import ContactPopUpForm from "@/components/pop-up-form/ContactPopUpForm";
 
 const OurServicesCTAComp = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -51,7 +52,7 @@ const OurServicesCTAComp = () => {
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    300+
+                    75+
                   </div>
                   <div className="text-sm text-gray-600">
                     Websites Delivered
@@ -68,19 +69,21 @@ const OurServicesCTAComp = () => {
               </div>
 
               {/* CTA Button */}
-              <button
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                className="cursor-pointer group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 mb-6"
-              >
-                <span>Get Your Quote</span>
-                <ArrowRight
-                  className={`w-5 h-5 transition-transform duration-300 ${
-                    isHovered ? "translate-x-1" : ""
-                  }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/20 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 rounded-2xl"></div>
-              </button>
+              <ContactPopUpForm>
+                <button
+                  onMouseEnter={() => setIsHovered(true)}
+                  onMouseLeave={() => setIsHovered(false)}
+                  className="cursor-pointer group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-700 hover:to-indigo-400 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 mb-6"
+                >
+                  <span>Get Your Quote</span>
+                  <ArrowRight
+                    className={`w-5 h-5 transition-transform duration-300 ${
+                      isHovered ? "translate-x-1" : ""
+                    }`}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-white/20 to-blue-400/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 rounded-2xl"></div>
+                </button>
+              </ContactPopUpForm>
             </div>
 
             {/* Right Visual */}
@@ -88,28 +91,28 @@ const OurServicesCTAComp = () => {
               {/* Floating Elements */}
               <div className="relative">
                 {/* Main Code Icon */}
-                <div className="relative bg-white rounded-full p-8 shadow-2xl border border-blue-200">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center transform rotate-6 hover:rotate-12 transition-transform duration-300">
+                <div className="relative bg-white rounded-full p-10 shadow-2xl border border-blue-200">
+                  <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center transform rotate-6 hover:rotate-12 transition-transform duration-300">
                     <Code className="w-12 h-12 text-white" />
                   </div>
                 </div>
 
                 {/* Floating Service Cards */}
-                <div className="absolute -top-6 -right-6 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce">
+                <div className="absolute -top-8 -right-8 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce">
                   <Rocket className="w-6 h-6 text-blue-600 mb-1" />
                   <div className="text-xs text-gray-600 font-medium">
                     Fast Launch
                   </div>
                 </div>
 
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce delay-300">
+                <div className="absolute -bottom-8 -left-8 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce delay-300">
                   <Globe className="w-6 h-6 text-indigo-600 mb-1" />
                   <div className="text-xs text-gray-600 font-medium">
                     Global Reach
                   </div>
                 </div>
 
-                <div className="absolute top-1/2 -right-12 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce delay-700">
+                <div className="absolute top-1/2 -right-14 bg-white rounded-xl p-3 shadow-xl border border-blue-200 animate-bounce delay-700">
                   <Zap className="w-6 h-6 text-yellow-500 mb-1" />
                   <div className="text-xs text-gray-600 font-medium">
                     Lightning Fast
@@ -117,7 +120,7 @@ const OurServicesCTAComp = () => {
                 </div>
 
                 {/* Rating Card */}
-                <div className="absolute -top-2 -left-8 bg-white rounded-xl p-3 shadow-xl border border-blue-200">
+                <div className="absolute -top-4 -left-10 bg-white rounded-xl p-3 shadow-xl border border-blue-200">
                   <div className="flex items-center gap-1 mb-1">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -146,16 +149,6 @@ const OurServicesCTAComp = () => {
                 </div>
                 <div className="absolute -bottom-4 -right-4 text-blue-200 text-6xl font-mono opacity-20 select-none">
                   {"}"}
-                </div>
-              </div>
-
-              {/* Contact Icons */}
-              <div className="absolute bottom-6 right-6 flex gap-3">
-                <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform cursor-pointer border border-blue-100">
-                  <Phone className="w-4 h-4 text-blue-600" />
-                </div>
-                <div className="w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform cursor-pointer border border-blue-100">
-                  <Mail className="w-4 h-4 text-indigo-600" />
                 </div>
               </div>
             </div>
