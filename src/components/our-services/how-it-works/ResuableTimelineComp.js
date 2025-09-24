@@ -82,7 +82,7 @@ const ReusableTimelineComp = ({
             {title}
           </h2>
           {subtitle && (
-            <p className={cn("text-lg w-2/3", textSecondaryColor)}>
+            <p className={cn("text-lg md:w-2/3", textSecondaryColor)}>
               {subtitle}
             </p>
           )}

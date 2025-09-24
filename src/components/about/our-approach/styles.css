@@ -232,7 +232,7 @@
         /* Use almost full screen width */
         max-width: none;
         min-width: auto;
-        border: 3px solid var(--color-primary-400);
+        border: 3px dotted var(--color-primary-400);
         border-radius: 10px;
         /* padding: 1rem; */
         margin: 2px;
